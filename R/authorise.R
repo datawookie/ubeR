@@ -1,6 +1,7 @@
 # SERVERID ------------------------------------------------------------------------------------------------------------
 
 set_serverid <- function(serverid) {
+  if (nchar(serverid) != 40) stop("Server ID should be 40 characters long.")
   assign("serverid", serverid, envir = auth_cache)
 }
 

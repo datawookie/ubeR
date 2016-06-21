@@ -19,6 +19,6 @@ callAPI = function(cmd, params = NULL, method = "GET") {
     } else {
       query = lapply(params, function(x) URLencode(as.character(x)))
     }
-    return(GET(url, query = query))
+    return(content(GET(url, query = query)))
   }
 }
