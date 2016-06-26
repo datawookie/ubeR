@@ -2,4 +2,6 @@
 .Rhistory
 .RData
 .Ruserdata
+.Rbuildignore
 setup-environment.sh
+.httr-oauth

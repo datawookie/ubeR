@@ -1,7 +1,3 @@
-GET <- function(url, query = NULL) {
-  httr::GET(url, query = query, httr::add_headers(Authorization = paste("Token", get_serverid())))
-}
-
 # TODO: Must be a better way to code this!!!
 #
 buildArguments <- function(latitude = NULL, longitude = NULL, start_latitude = NULL, start_longitude = NULL,
@@ -11,6 +7,10 @@ buildArguments <- function(latitude = NULL, longitude = NULL, start_latitude = N
     ifelse(length(value) > 0, value, NA)
   }, simplify = FALSE)
 }
+
+# GET <- function(url, query = NULL) {
+#   httr::GET(url, query = query, httr::add_headers(Authorization = paste("Token", get_serverid())))
+# }
 
 callAPI = function(cmd, params = NULL, method = "GET") {
   url = getEndpoint(cmd)
@@ -25,6 +25,6 @@ callAPI = function(cmd, params = NULL, method = "GET") {
     } else {
       query = lapply(params, function(x) URLencode(as.character(x)))
     }
-    return(httr::content(GET(url, query = query)))
+    return(httr::content(GET(url, query = query, config(token = get_oauth_token()))))
   }
 }
