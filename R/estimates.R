@@ -8,7 +8,7 @@ estimate_price <- function(start_latitude, start_longitude, end_latitude, end_lo
   #
   seat_count = as.integer(seat_count)
 
-  estimates = callAPI("estimates/price", buildArguments(start_latitude = start_latitude, start_longitude = start_longitude,
+  estimates = callAPI("estimates/price", 1, buildArguments(start_latitude = start_latitude, start_longitude = start_longitude,
                                                         end_latitude = end_latitude, end_longitude = end_longitude, seat_count = seat_count))
 
  bind_rows(lapply(estimates$prices, function(estimate) {
@@ -24,7 +24,7 @@ estimate_time <- function(start_latitude, start_longitude, product_id = NULL) {
   #
   product_id = as.character(product_id)
 
-  estimates = callAPI("estimates/time", buildArguments(start_latitude = start_latitude, start_longitude = start_longitude, product_id = product_id))
+  estimates = callAPI("estimates/time", 1, buildArguments(start_latitude = start_latitude, start_longitude = start_longitude, product_id = product_id))
 
   bind_rows(lapply(estimates$times, function(estimate) {
     data.frame(t(unlist(estimate)), stringsAsFactors = FALSE)

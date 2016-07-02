@@ -1,3 +1,5 @@
+http://stackoverflow.com/questions/36269501/uber-api-doesnt-allow-request-from-localhost
+
 # Installation
 
 You should install the development version of the `httr` package.
@@ -7,11 +9,14 @@ devtools::install_github("hadley/httr")
 
 # Uber Application Setup
 
-1. 
-2. 
-3. 
-4. 
-5. Set Redirect URL to http://localhost:1410/
+1. Go to https://developer.uber.com/dashboard/create.
+2. Select Rides API and fill out the Name and Description details.
+3. Press Create.
+4. In Authorisations tab:
+    - Set Redirect URL to http://localhost:1410/
+    - Insert a Privary Policy URL.
+    - Check the required scopes under General Scopes.
+    - Press Save.
 
 ## Uber Endpoints
 
@@ -28,7 +33,6 @@ The following endpoints still need to be managed:
 
 GET /v1.2/history
 GET /v1.1/history
-GET /v1/me                             [requires OAuth 2.0]
 POST /v1/requests
 GET /v1/requests/current
 PATCH /v1/requests/current

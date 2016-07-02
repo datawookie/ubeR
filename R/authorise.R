@@ -18,6 +18,9 @@ get_serverid <- function() {
 
 # OAUTH2 --------------------------------------------------------------------------------------------------------------
 
+#' It might be worthwhile considering saving a default token as is done for rdrop2 package.
+#'
+#' @export
 uber_oauth = function(client_key, client_secret) {
   endpoint <- httr::oauth_endpoint(
     authorize = "https://login.uber.com/oauth/v2/authorize",
@@ -25,10 +28,10 @@ uber_oauth = function(client_key, client_secret) {
   )
   app <- httr::oauth_app("uber", key = client_key, secret = client_secret)
 
-
   # Sys.setenv("HTTR_SERVER_PORT" = "1410/")
-  scope = "profile"
-  token <- httr::oauth2.0_token(endpoint, app, scope = scope)
+  #
+  scope = c("profile", "request", "history_lite", "places", "history", "ride_widgets")
+  token <- httr::oauth2.0_token(endpoint, app, scope = scope, cache = FALSE)
 
   assign("oauth_token", token, envir = auth_cache)
 }
@@ -37,6 +40,7 @@ has_oauth_token <- function() {
   exists("oauth_token", envir = auth_cache)
 }
 
+#' @export
 get_oauth_token = function() {
   if (!has_oauth_token()) {
     stop("This session doesn't yet have OAuth2.0 authentication.")

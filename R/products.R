@@ -17,9 +17,9 @@ products <- function(latitude = NA, longitude = NA, product_id = NA) {
   }
 
   if (is.na(product_id)) {
-    rides = callAPI("products", buildArguments(latitude = latitude, longitude = longitude))$products
+    rides = callAPI("products", 1, buildArguments(latitude = latitude, longitude = longitude))$products
   } else {
-    rides = list(callAPI(paste("products", product_id, sep = "/")))
+    rides = list(callAPI(paste("products", product_id, sep = "/"), 1))
   }
 
   rides = lapply(rides, function(ride) {

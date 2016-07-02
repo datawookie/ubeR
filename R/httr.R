@@ -8,12 +8,13 @@ buildArguments <- function(latitude = NULL, longitude = NULL, start_latitude = N
   }, simplify = FALSE)
 }
 
-# GET <- function(url, query = NULL) {
-#   httr::GET(url, query = query, httr::add_headers(Authorization = paste("Token", get_serverid())))
-# }
+GET <- function(url, query = NULL) {
+  # httr::GET(url, query = query, httr::add_headers(Authorization = paste("Token", get_serverid())))
+  httr::GET(url, query = query, httr::config(token = get_oauth_token()))
+}
 
-callAPI = function(cmd, params = NULL, method = "GET") {
-  url = getEndpoint(cmd)
+callAPI = function(cmd, version, params = NULL, method = "GET") {
+  url = getEndpoint(cmd, version)
 
   params = params[!sapply(params, is.na)]
 
@@ -25,6 +26,6 @@ callAPI = function(cmd, params = NULL, method = "GET") {
     } else {
       query = lapply(params, function(x) URLencode(as.character(x)))
     }
-    return(httr::content(GET(url, query = query, config(token = get_oauth_token()))))
+    return(httr::content(GET(url, query = query)))
   }
 }
