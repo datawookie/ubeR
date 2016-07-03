@@ -1,5 +1,3 @@
-http://stackoverflow.com/questions/36269501/uber-api-doesnt-allow-request-from-localhost
-
 # Installation
 
 You should install the development version of the `httr` package.
@@ -38,7 +36,6 @@ GET /v1/payment-methods
 The following endpoints still need to be managed:
 
 PATCH /v1/requests/current
-POST /v1/requests/estimate
 GET /v1/requests/{request_id}
 PATCH /v1/requests/{request_id}
 DELETE /v1/requests/{request_id}
