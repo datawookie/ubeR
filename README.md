@@ -28,15 +28,16 @@ GET /v1/products
 GET /v1/products/{product_id}
 GET /v1/estimates/price
 GET /v1/estimates/time
-
-The following endpoints still need to be managed:
-
 GET /v1.2/history
 GET /v1.1/history
 POST /v1/requests
 GET /v1/requests/current
-PATCH /v1/requests/current
 DELETE /v1/requests/current
+
+The following endpoints still need to be managed:
+
+
+PATCH /v1/requests/current
 POST /v1/requests/estimate
 GET /v1/requests/{request_id}
 PATCH /v1/requests/{request_id}

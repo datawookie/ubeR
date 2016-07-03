@@ -13,5 +13,13 @@ check.longitude <- function(longitude) {
 }
 
 getEndpoint <- function(cmd, version = 1) {
-  paste("https://api.uber.com/v", version, '/', cmd, sep='')
+  # paste("https://api.uber.com/v", version, '/', cmd, sep='')
+  #
+  # Use the API sandbox (https://developer.uber.com/docs/rides/sandbox)
+  #
+  paste("https://sandbox-api.uber.com/v", version, '/', cmd, sep='')
+}
+
+geocode <- function(location) {
+  suppressMessages(ggmap::geocode(location))
 }
