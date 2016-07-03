@@ -3,7 +3,6 @@
 #' Requires an OAuth 2.0 token with the request scope.
 #'
 #' @export
-uber_payment <- function() {
+uber_payment_methods <- function() {
   callAPI("payment-methods", 1)
 }
-

@@ -1,5 +1,8 @@
 # TODO: Must be a better way to code this!!!
 #
+# One option would be to use as.list(match.call())[-1] from within each function, which returns
+# the formal arguments as a list.
+#
 buildArguments <- function(latitude = NULL, longitude = NULL, start_latitude = NULL, start_longitude = NULL,
                            end_latitude = NULL, end_longitude = NULL, seat_count = NULL, product_id = NULL,
                            start_address = NULL, end_address = NULL) {
@@ -24,7 +27,6 @@ DELETE <- function(url, body = NULL) {
 
 callAPI = function(cmd, version, params = NULL, method = "GET") {
   url = getEndpoint(cmd, version)
-  print(url)
 
   params = params[!sapply(params, is.na)]
 

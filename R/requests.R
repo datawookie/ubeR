@@ -25,7 +25,6 @@ uber_requests <- function(start_latitude = NULL, start_longitude = NULL, end_lat
   callAPI("requests", 1, method = "POST", params = params)
 }
 
-
 #' https://developer.uber.com/docs/rides/api/v1-requests-current
 #'
 #' Requires an OAuth 2.0 token with the all_trips or request scope
