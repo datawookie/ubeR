@@ -12,6 +12,28 @@ buildArguments <- function(latitude = NULL, longitude = NULL, start_latitude = N
   }, simplify = FALSE)
 }
 
+newBuildArguments <- function(...) {
+  # =print(as.list(...))
+  params = as.list(match.call())[-1]
+
+  if ("start_address" %in% names(params)) {
+    geo = suppressMessages(geocode(params$start_address))
+    params$start_latitude = geo$lat
+    params$start_longitude = geo$lon
+    #
+    params$start_address <- NULL
+  }
+  if ("end_address" %in% names(params)) {
+    geo = suppressMessages(geocode(params$end_address))
+    params$end_latitude = geo$lat
+    params$end_longitude = geo$lon
+    #
+    params$end_address <- NULL
+  }
+  #
+  params
+}
+
 GET <- function(url, query = NULL) {
   # httr::GET(url, query = query, httr::add_headers(Authorization = paste("Token", get_serverid())))
   httr::GET(url, httr::config(token = get_oauth_token()), query = query)
