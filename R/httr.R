@@ -3,32 +3,18 @@
 # One option would be to use as.list(match.call())[-1] from within each function, which returns
 # the formal arguments as a list.
 #
-buildArguments <- function(latitude = NULL, longitude = NULL, start_latitude = NULL, start_longitude = NULL,
-                           end_latitude = NULL, end_longitude = NULL, seat_count = NULL, product_id = NULL,
-                           start_address = NULL, end_address = NULL) {
-  sapply(names(formals()), function(arg) {
-    value <- get(arg)
-    ifelse(length(value) > 0, value, NA)
-  }, simplify = FALSE)
-}
-
-newBuildArguments <- function(...) {
-  # =print(as.list(...))
-  params = as.list(match.call())[-1]
+parseParameters <- function(call) {
+  params = as.list(call)[-1]
 
   if ("start_address" %in% names(params)) {
     geo = suppressMessages(geocode(params$start_address))
     params$start_latitude = geo$lat
     params$start_longitude = geo$lon
-    #
-    params$start_address <- NULL
   }
   if ("end_address" %in% names(params)) {
     geo = suppressMessages(geocode(params$end_address))
     params$end_latitude = geo$lat
     params$end_longitude = geo$lon
-    #
-    params$end_address <- NULL
   }
   #
   params
