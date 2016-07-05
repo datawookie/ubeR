@@ -1,15 +1,9 @@
 #' https://developer.uber.com/docs/rides/api/v1-estimates-price
 #' @export
 estimate_price <- function(start_latitude, start_longitude, end_latitude, end_longitude, seat_count = NULL) {
-  start_latitude = check.latitude(start_latitude)
-  start_longitude = check.longitude(start_longitude)
-  end_latitude = check.latitude(end_latitude)
-  end_longitude = check.longitude(end_longitude)
-  #
   seat_count = as.integer(seat_count)
 
-  estimates = callAPI("estimates/price", 1, buildArguments(start_latitude = start_latitude, start_longitude = start_longitude,
-                                                        end_latitude = end_latitude, end_longitude = end_longitude, seat_count = seat_count))
+  estimates = callAPI("estimates/price", 1, , params = parseParameters(environment()))
 
  bind_rows(lapply(estimates$prices, function(estimate) {
     data.frame(t(unlist(estimate)), stringsAsFactors = FALSE)

@@ -1,10 +1,5 @@
-# TODO: Must be a better way to code this!!!
-#
-# One option would be to use as.list(match.call())[-1] from within each function, which returns
-# the formal arguments as a list.
-#
 parseParameters <- function(call) {
-  params = as.list(call)[-1]
+  params = as.list(call)
 
   if ("start_address" %in% names(params)) {
     geo = suppressMessages(geocode(params$start_address))
@@ -16,6 +11,11 @@ parseParameters <- function(call) {
     params$end_latitude = geo$lat
     params$end_longitude = geo$lon
   }
+  #
+  params$start_latitude  = check.latitude(params$start_latitude)
+  params$end_latitude    = check.latitude(params$end_latitude)
+  params$start_longitude = check.longitude(params$start_longitude)
+  params$end_longitude   = check.longitude(params$end_longitude)
   #
   params
 }

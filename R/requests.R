@@ -10,7 +10,7 @@
 #' @param end_address
 #' @export
 uber_requests <- function(start_latitude = NULL, start_longitude = NULL, end_latitude = NULL, end_longitude = NULL, start_address = NULL, end_address = NULL) {
-  callAPI("requests", 1, method = "POST", params = parseParameters(match.call()))
+  callAPI("requests", 1, method = "POST", params = parseParameters(environment()))
 }
 
 #' https://developer.uber.com/docs/rides/api/v1-requests-estimate
@@ -19,9 +19,7 @@ uber_requests <- function(start_latitude = NULL, start_longitude = NULL, end_lat
 #'
 #' @export
 uber_requests_estimate <- function(start_latitude = NULL, start_longitude = NULL, end_latitude = NULL, end_longitude = NULL) {
-  params = buildArguments(start_latitude = start_latitude, start_longitude = start_longitude,
-                          end_latitude = end_latitude, end_longitude = end_longitude)
-  callAPI("requests/estimate", 1, method = "POST", params = params)
+  callAPI("requests/estimate", 1, method = "POST", params = parseParameters(environment()))
 }
 
 #' https://developer.uber.com/docs/rides/api/v1-requests-current
