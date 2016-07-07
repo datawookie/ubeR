@@ -15,7 +15,10 @@
    id="svg2"
    version="1.1"
    inkscape:version="0.91 r13725"
-   sodipodi:docname="uber-logo.svg">
+   sodipodi:docname="uber-logo.svg"
+   inkscape:export-filename="/home/colliera/proj/Z-261-ubeR/uber-logo.svg.png"
+   inkscape:export-xdpi="180"
+   inkscape:export-ydpi="180">
   <defs
      id="defs4" />
   <sodipodi:namedview
@@ -25,9 +28,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.4"
-     inkscape:cx="518.00344"
-     inkscape:cy="54.893854"
+     inkscape:zoom="3.959798"
+     inkscape:cx="636.99839"
+     inkscape:cy="25.455685"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -50,7 +53,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -70,10 +73,10 @@
          id="tspan3342"
          x="147.66602"
          y="1026.6981"
-         style="font-size:180px">UBER</tspan></text>
+         style="font-size:180px;-inkscape-font-specification:arial;font-family:arial;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal">UBER</tspan></text>
     <path
-       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:8.85805416px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 534.50797,1038.1779 102.13374,0.091"
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:9.33342934px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 532.32256,1035.1385 113.57563,0.091"
        id="path3350"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cc" />
