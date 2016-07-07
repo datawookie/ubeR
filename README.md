@@ -1,3 +1,5 @@
+![](uber-logo.svg)
+
 # Installation
 
 You should install the development version of the `httr` package.
@@ -32,11 +34,11 @@ POST /v1/requests
 GET /v1/requests/current
 DELETE /v1/requests/current
 GET /v1/payment-methods
+GET /v1/places/{place_id}
+PUT /v1/places/{place_id}
 
 The following endpoints still need to be managed:
 
-GET /v1/places/{place_id}
-PUT /v1/places/{place_id}
 PATCH /v1/requests/current
 GET /v1/requests/{request_id}
 PATCH /v1/requests/{request_id}
