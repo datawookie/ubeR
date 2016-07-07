@@ -29,17 +29,26 @@ POST <- function(url, body = NULL) {
   httr::POST(url, httr::config(token = get_oauth_token()), encode = "json", body = body)
 }
 
+PUT <- function(url, body = NULL) {
+  httr::PUT(url, httr::config(token = get_oauth_token()), encode = "json", body = body)
+}
+
 DELETE <- function(url, body = NULL) {
   httr::DELETE(url, httr::config(token = get_oauth_token()), encode = "json", body = body)
 }
 
 callAPI = function(cmd, version, params = NULL, method = "GET") {
   url = getEndpoint(cmd, version)
+  print(url)
 
   params = params[!sapply(params, is.na)]
+  print(params)
 
   if (method == "POST") {
     response = try(POST(url, body = params), silent = TRUE)
+    print(response)
+  } else if (method == "PUT") {
+    response = try(PUT(url, body = params), silent = TRUE)
     print(response)
   } else if (method == "GET") {
     if (is.null(params)) {

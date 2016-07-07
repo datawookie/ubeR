@@ -35,14 +35,14 @@ GET /v1/payment-methods
 
 The following endpoints still need to be managed:
 
+GET /v1/places/{place_id}
+PUT /v1/places/{place_id}
 PATCH /v1/requests/current
 GET /v1/requests/{request_id}
 PATCH /v1/requests/{request_id}
 DELETE /v1/requests/{request_id}
 GET /v1/requests/{request_id}/map
 GET /v1/requests/{request_id}/receipt
-GET /v1/places/{place_id}
-PUT /v1/places/{place_id}
 POST /v1/reminders
 GET /v1/reminders/{reminder_id}
 PATCH /v1/reminders/{reminder_id}

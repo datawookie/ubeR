@@ -1,11 +1,13 @@
 check.latitude <- function(latitude) {
+  if (is.null(latitude) || is.na(latitude)) return(latitude)
   latitude = as.numeric(latitude)
-  if (!is.na(latitude) && (latitude > 90 || latitude < -90)) {
+  if ((latitude > 90 || latitude < -90)) {
     stop('Latitude must be in range [90.0,-90.0].')
   } else return(latitude)
 }
 
 check.longitude <- function(longitude) {
+  if (is.null(longitude) || is.na(longitude)) return(longitude)
   longitude = as.numeric(longitude)
   if (!is.na(longitude) && (longitude > 180 || longitude < -180)) {
     stop('Longitude must be in range [180,-180].')
