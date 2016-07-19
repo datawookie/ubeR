@@ -30,7 +30,8 @@ uber_oauth = function(client_key, client_secret) {
 
   # Sys.setenv("HTTR_SERVER_PORT" = "1410/")
   #
-  scope = c("profile", "request", "history_lite", "places", "history", "ride_widgets")
+  # scope = c("profile", "request", "history_lite", "places", "history", "ride_widgets")
+  scope = c("profile")
   token <- httr::oauth2.0_token(endpoint, app, scope = scope, cache = FALSE)
 
   assign("oauth_token", token, envir = auth_cache)

@@ -39,17 +39,17 @@ DELETE <- function(url, body = NULL) {
 
 callAPI = function(cmd, version, params = NULL, method = "GET") {
   url = getEndpoint(cmd, version)
-  print(url)
+  # print(url)
 
   params = params[!sapply(params, is.na)]
-  print(params)
+  # print(params)
 
   if (method == "POST") {
     response = try(POST(url, body = params), silent = TRUE)
-    print(response)
+    # print(response)
   } else if (method == "PUT") {
     response = try(PUT(url, body = params), silent = TRUE)
-    print(response)
+    # print(response)
   } else if (method == "GET") {
     if (is.null(params)) {
       query = NULL
