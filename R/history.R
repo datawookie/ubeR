@@ -4,5 +4,9 @@
 #'
 #' @export
 uber_history <- function() {
-  callAPI("history", 1.2)
+  # callAPI("history", 1.2)
+  print("DIRECT")
+  print(httr::content(GET(getEndpoint("history", 1.2))))
+  print("INDIRECT")
+  print(callAPI("history", 1.2))
 }

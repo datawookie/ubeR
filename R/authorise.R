@@ -31,7 +31,7 @@ uber_oauth = function(client_key, client_secret) {
   # Sys.setenv("HTTR_SERVER_PORT" = "1410/")
   #
   # scope = c("profile", "request", "history_lite", "places", "history", "ride_widgets")
-  scope = c("profile")
+  scope = c("profile", "history_lite", "places")
   token <- httr::oauth2.0_token(endpoint, app, scope = scope, cache = FALSE)
 
   assign("oauth_token", token, envir = auth_cache)
@@ -42,7 +42,7 @@ has_oauth_token <- function() {
 }
 
 #' @export
-get_oauth_token = function() {
+get_oauth_token <- function() {
   if (!has_oauth_token()) {
     stop("This session doesn't yet have OAuth2.0 authentication.")
   }

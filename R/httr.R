@@ -22,6 +22,7 @@ parseParameters <- function(call) {
 
 GET <- function(url, query = NULL) {
   # httr::GET(url, query = query, httr::add_headers(Authorization = paste("Token", get_serverid())))
+  print("foo")
   httr::GET(url, httr::config(token = get_oauth_token()), query = query)
 }
 

@@ -7,6 +7,7 @@ source("R/utils.R")
 source("R/me.R")
 source("R/payment.R")
 source("R/requests.R")
+source("R/history.R")
 
 library(dplyr)
 
@@ -45,8 +46,12 @@ UBER_CLIENTSECRET = "bN175mXhuvabQoGp4JYJi16b9RvFKIvZXhontc0b"
 
 uber_oauth(UBER_CLIENTID, UBER_CLIENTSECRET)
 
-uber_me()
+# print(uber_me())
 uber_history()
+
+# Stop here.
+stop("Stop here.", call. = FALSE)
+
 uber_places_get()
 
 #constructor for reference
