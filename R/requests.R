@@ -19,7 +19,11 @@ uber_requests <- function(start_latitude = NULL, start_longitude = NULL, end_lat
 #'
 #' @export
 uber_requests_estimate <- function(start_latitude = NULL, start_longitude = NULL, end_latitude = NULL, end_longitude = NULL) {
-  callAPI("requests/estimate", 1, method = "POST", params = parseParameters(environment()))
+  response <- callAPI("requests/estimate", 1, method = "POST", params = parseParameters(environment()))
+  #
+  response$price$fare_breakdown <- data.frame(bind_rows(response$price$fare_breakdown))
+  #
+  response
 }
 
 #' https://developer.uber.com/docs/rides/api/v1-requests-current
