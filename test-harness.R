@@ -1,18 +1,36 @@
+source("R/cache.R")
+source("R/authorise.R")
+source("R/httr.R")
+source("R/products.R")
+source("R/estimates.R")
+source("R/utils.R")
+source("R/me.R")
+source("R/payment.R")
+source("R/requests.R")
+source("R/history.R")
+source("R/api.R")
+
 library(dplyr)
 library(ubeR)
 
-# UBER_SERVERID = "q4AesUOxJ5rWru8jdTwnemjX2GeUcpCaGvzEqtjo"
-# UBER_CLIENTID = "ReTYRlEGNnzkhtsn-A78MiXbnGOzdQf8"
-# UBER_CLIENTSECRET = "MpWYGY8W7bv62tfM2neciUpjZOAF_wx0JHRG94A2"
+#Andrew's
+UBER_SERVERID = "q4AesUOxJ5rWru8jdTwnemjX2GeUcpCaGvzEqtjo"
+UBER_CLIENTID = "ReTYRlEGNnzkhtsn-A78MiXbnGOzdQf8"
+UBER_CLIENTSECRET = "MpWYGY8W7bv62tfM2neciUpjZOAF_wx0JHRG94A2"
 
-UBER_SERVERID = "RSkdFVabimhe0z90MQuXMcbzurlDUH7IA8n6rNT6"
-UBER_CLIENTID = "OjHS0DlHE8HnureO9XYsVQFgvIfWI7UX"
-UBER_CLIENTSECRET = "OlD1E07ig34-qiBDWYQGsx_5QA4uoCrXiUxHx5IN"
+#Arthur's
+# UBER_SERVERID = "EhhHWWdDt_KbpJQP7N66VpTDzqNBVbhDRoEB47iE"
+# UBER_CLIENTID = "vTILcoCGleTfliGQFGBWdnffB8li8kdD"
+# UBER_CLIENTSECRET = "bN175mXhuvabQoGp4JYJi16b9RvFKIvZXhontc0b"
 
-# set_serverid(Sys.getenv("UBER_SERVERID"))
-set_serverid(UBER_SERVERID)
-get_serverid()
 
+#
+# # set_serverid(Sys.getenv("UBER_SERVERID"))
+# set_serverid(UBER_SERVERID)
+# get_serverid()
+#
+# uber_me()
+#
 # r1 = products(latitude = -33.925278, longitude = 18.423889)
 # r2 = products(product_id = "91901472-f30d-4614-8ba7-9fcc937cebf5")
 
@@ -35,6 +53,23 @@ uber_me()
 
 uber_history()
 
+uber_places_get()
+
+# historylist <- httr::content(GET("https://sandbox-api.uber.com/v1.2/history"))
+# historylist$history[[1]]
+#
+# #install.packages("purrr")
+# library("purrr")
+#
+# starttimes <- unlist(map(historylist$history, "start_time")) %>% as.POSIXct(origin = "1970-01-01")
+# endtimes <- unlist(map(historylist$history, "end_time")) %>% as.POSIXct(origin = "1970-01-01")
+#
+# plot(starttimes, col = "red")
+# points(endtimes, col = "blue")
+#
+#
+# lapply(historylist$history, end_time)
+
 uber_payment_methods()
 
 uber_requests_estimate(start_latitude = 37.761492, start_longitude = -122.423941,
@@ -46,3 +81,8 @@ uber_requests(start_address = "37 Beach Road, Mouille Point, Cape Town",
 uber_requests_current()
 uber_requests_current_delete()
 uber_requests_current()
+
+uber_estimate_price(start_latitude = 37.761492, start_longitude = -122.423941,
+               end_latitude = 37.775393, end_longitude = -122.417546)
+
+uber_estimate_time(start_latitude = 37.761492, start_longitude = -122.423941)
