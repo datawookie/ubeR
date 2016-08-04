@@ -8,6 +8,7 @@ source("R/me.R")
 source("R/payment.R")
 source("R/requests.R")
 source("R/history.R")
+source("R/api.R")
 
 library(dplyr)
 
@@ -16,14 +17,14 @@ library(dplyr)
 library(httr)
 
 #Andrew's
-#  UBER_SERVERID = "q4AesUOxJ5rWru8jdTwnemjX2GeUcpCaGvzEqtjo"
-#  UBER_CLIENTID = "ReTYRlEGNnzkhtsn-A78MiXbnGOzdQf8"
-#  UBER_CLIENTSECRET = "MpWYGY8W7bv62tfM2neciUpjZOAF_wx0JHRG94A2"
+UBER_SERVERID = "q4AesUOxJ5rWru8jdTwnemjX2GeUcpCaGvzEqtjo"
+UBER_CLIENTID = "ReTYRlEGNnzkhtsn-A78MiXbnGOzdQf8"
+UBER_CLIENTSECRET = "MpWYGY8W7bv62tfM2neciUpjZOAF_wx0JHRG94A2"
 
 #Arthur's
-UBER_SERVERID = "EhhHWWdDt_KbpJQP7N66VpTDzqNBVbhDRoEB47iE"
-UBER_CLIENTID = "vTILcoCGleTfliGQFGBWdnffB8li8kdD"
-UBER_CLIENTSECRET = "bN175mXhuvabQoGp4JYJi16b9RvFKIvZXhontc0b"
+# UBER_SERVERID = "EhhHWWdDt_KbpJQP7N66VpTDzqNBVbhDRoEB47iE"
+# UBER_CLIENTID = "vTILcoCGleTfliGQFGBWdnffB8li8kdD"
+# UBER_CLIENTSECRET = "bN175mXhuvabQoGp4JYJi16b9RvFKIvZXhontc0b"
 
 
 #
@@ -46,36 +47,29 @@ UBER_CLIENTSECRET = "bN175mXhuvabQoGp4JYJi16b9RvFKIvZXhontc0b"
 
 uber_oauth(UBER_CLIENTID, UBER_CLIENTSECRET)
 
-# print(uber_me())
-uber_history()
-
 # Stop here.
 stop("Stop here.", call. = FALSE)
 
-uber_places_get()
-
-#constructor for reference
-httr::content(GET("https://sandbox-api.uber.com/v1.2/history"))
-httr::content(GET("https://sandbox-api.uber.com/v1/me"))
-httr::content(GET("https://sandbox-api.uber.com/v1/places/home")) #reports missing places if it's not in scope
-
-historylist <- httr::content(GET("https://sandbox-api.uber.com/v1.2/history"))
-historylist$history[[1]]
-
-#install.packages("purrr")
-library("purrr")
-
-starttimes <- unlist(map(historylist$history, "start_time")) %>% as.POSIXct(origin = "1970-01-01")
-endtimes <- unlist(map(historylist$history, "end_time")) %>% as.POSIXct(origin = "1970-01-01")
-
-plot(starttimes, col = "red")
-points(endtimes, col = "blue")
-
-
-lapply(historylist$history, end_time)
-
+print(uber_me())
+uber_history()
 
 uber_places_get()
+
+# historylist <- httr::content(GET("https://sandbox-api.uber.com/v1.2/history"))
+# historylist$history[[1]]
+#
+# #install.packages("purrr")
+# library("purrr")
+#
+# starttimes <- unlist(map(historylist$history, "start_time")) %>% as.POSIXct(origin = "1970-01-01")
+# endtimes <- unlist(map(historylist$history, "end_time")) %>% as.POSIXct(origin = "1970-01-01")
+#
+# plot(starttimes, col = "red")
+# points(endtimes, col = "blue")
+#
+#
+# lapply(historylist$history, end_time)
+
 uber_payment_methods()
 
 uber_requests_estimate(start_latitude = 37.761492, start_longitude = -122.423941,
