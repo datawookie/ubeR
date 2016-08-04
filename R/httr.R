@@ -17,12 +17,13 @@ parseParameters <- function(call) {
   params$start_longitude = check.longitude(params$start_longitude)
   params$end_longitude   = check.longitude(params$end_longitude)
   #
+  params = params[!sapply(params, is.null)]
+  #
   params
 }
 
 GET <- function(url, query = NULL) {
   # httr::GET(url, query = query, httr::add_headers(Authorization = paste("Token", get_serverid())))
-  print("foo")
   httr::GET(url, httr::config(token = get_oauth_token()), query = query)
 }
 
@@ -43,7 +44,6 @@ callAPI = function(cmd, version, params = NULL, method = "GET") {
   # print(url)
 
   params = params[!sapply(params, is.na)]
-  # print(params)
 
   if (method == "POST") {
     response = try(POST(url, body = params), silent = TRUE)
