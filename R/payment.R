@@ -5,6 +5,9 @@
 #' @export
 uber_payment_methods <- function() {
   newlist <- callAPI("payment-methods", 1)
-  df <- as.data.frame(do.call(rbind, newlist$payment_methods))
+  payment <- newlist$payment_methods
+  payment <- lapply(payment, nullToNA)
+  df <- as.data.frame(do.call(rbind, payment))
+  df <- as.data.frame(lapply(df, unlist))
   return(df)
 }

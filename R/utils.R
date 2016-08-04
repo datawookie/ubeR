@@ -25,3 +25,9 @@ getEndpoint <- function(cmd, version = 1) {
 geocode <- function(location) {
   suppressMessages(ggmap::geocode(location))
 }
+
+nullToNA <- function(x) {
+  x[sapply(x, is.null)] <- NA
+  return(x)
+}
+
