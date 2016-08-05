@@ -1,3 +1,6 @@
 ^.*\.Rproj$
 ^\.Rproj\.user$
 ^\.httr-oauth$
+setup-environment.R
+test-harness.R
+uber-logo.svg
