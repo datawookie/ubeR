@@ -13,51 +13,28 @@ UBER_SERVERID = Sys.getenv("UBER_SERVERID")
 UBER_CLIENTID = Sys.getenv("UBER_CLIENTID")
 UBER_CLIENTSECRET = Sys.getenv("UBER_CLIENTSECRET")
 
-#
-# # set_serverid(Sys.getenv("UBER_SERVERID"))
-# set_serverid(UBER_SERVERID)
-# get_serverid()
-#
-# uber_me()
-#
-# r1 = products(latitude = -33.925278, longitude = 18.423889)
-# r2 = products(product_id = "91901472-f30d-4614-8ba7-9fcc937cebf5")
+## --------------------------------------------------------------------------------------------------------------------
 
-# estimate_price(start_latitude = -33.8997839, start_longitude = 18.4067785,
-#                end_latitude = -33.9272685, end_longitude = 18.455374,
-#                seat_count = 2)
-
-# estimate_time(start_latitude = -33.8997839, start_longitude = 18.4067785)
+uber_set_serverid(UBER_SERVERID)
+uber_get_serverid()
 
 # REQUIRE OAUTH -------------------------------------------------------------------------------------------------------
 
 uber_oauth(UBER_CLIENTID, UBER_CLIENTSECRET)
 
-uber_places_put("home", "685 Market St, San Francisco, CA 94103, USA")
-uber_places_get()
-uber_places_put("home", "115 St Andrews Dr, Durban North, 4051, South Africa")
-uber_places_get()
+# products(latitude = -33.925278, longitude = 18.423889)
+# products(product_id = "91901472-f30d-4614-8ba7-9fcc937cebf5")
 
 uber_me()
 
 uber_history()
 
 uber_places_get()
-
-# historylist <- httr::content(GET("https://sandbox-api.uber.com/v1.2/history"))
-# historylist$history[[1]]
 #
-# #install.packages("purrr")
-# library("purrr")
-#
-# starttimes <- unlist(map(historylist$history, "start_time")) %>% as.POSIXct(origin = "1970-01-01")
-# endtimes <- unlist(map(historylist$history, "end_time")) %>% as.POSIXct(origin = "1970-01-01")
-#
-# plot(starttimes, col = "red")
-# points(endtimes, col = "blue")
-#
-#
-# lapply(historylist$history, end_time)
+# uber_places_put("home", "685 Market St, San Francisco, CA 94103, USA")
+# uber_places_get()
+# uber_places_put("home", "115 St Andrews Dr, Durban North, 4051, South Africa")
+# uber_places_get()
 
 uber_payment_methods()
 
