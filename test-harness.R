@@ -22,12 +22,12 @@ uber_get_serverid()
 
 uber_oauth(UBER_CLIENTID, UBER_CLIENTSECRET)
 
-# products(latitude = -33.925278, longitude = 18.423889)
-# products(product_id = "91901472-f30d-4614-8ba7-9fcc937cebf5")
-
 uber_me()
 
 uber_history()
+
+uber_products(latitude = -33.925278, longitude = 18.423889)
+uber_products(product_id = "91901472-f30d-4614-8ba7-9fcc937cebf5")
 
 uber_places_get()
 #
