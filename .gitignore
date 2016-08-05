@@ -3,5 +3,5 @@
 .RData
 .Ruserdata
 .Rbuildignore
-setup-environment.sh
+setup-environment.R
 .httr-oauth

@@ -1,28 +1,17 @@
 source("R/cache.R")
 source("R/authorise.R")
 source("R/httr.R")
-source("R/products.R")
-source("R/estimates.R")
 source("R/utils.R")
-source("R/me.R")
-source("R/payment.R")
-source("R/requests.R")
-source("R/history.R")
 source("R/api.R")
 
 library(dplyr)
-library(ubeR)
+# library(ubeR)
 
-#Andrew's
-UBER_SERVERID = "q4AesUOxJ5rWru8jdTwnemjX2GeUcpCaGvzEqtjo"
-UBER_CLIENTID = "ReTYRlEGNnzkhtsn-A78MiXbnGOzdQf8"
-UBER_CLIENTSECRET = "MpWYGY8W7bv62tfM2neciUpjZOAF_wx0JHRG94A2"
-
-#Arthur's
-# UBER_SERVERID = "EhhHWWdDt_KbpJQP7N66VpTDzqNBVbhDRoEB47iE"
-# UBER_CLIENTID = "vTILcoCGleTfliGQFGBWdnffB8li8kdD"
-# UBER_CLIENTSECRET = "bN175mXhuvabQoGp4JYJi16b9RvFKIvZXhontc0b"
-
+# You'll need to set up these environment variables first.
+#
+UBER_SERVERID = Sys.getenv("UBER_SERVERID")
+UBER_CLIENTID = Sys.getenv("UBER_CLIENTID")
+UBER_CLIENTSECRET = Sys.getenv("UBER_CLIENTSECRET")
 
 #
 # # set_serverid(Sys.getenv("UBER_SERVERID"))
