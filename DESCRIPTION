@@ -4,7 +4,7 @@ Title: What the Package Does (Title Case)
 Version: 0.1.0
 Author: c(
   person("Andrew", "Collier", email = "andrew@exegetic.biz", role = c("aut", "cre")),
-  person("Arthur", "Wu", email = "arthur@ixperience.co.za", role = c("aut"))
+  person("Arthur", "Wu", email = "arthurwu1@gmail.com", role = c("aut"))
   )
 Description: More about what it does (maybe more than one line)
 License: What license is it under?
