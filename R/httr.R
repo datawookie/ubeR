@@ -39,6 +39,8 @@ DELETE <- function(url, body = NULL) {
   httr::DELETE(url, httr::config(token = get_oauth_token()), encode = "json", body = body)
 }
 
+#' @import httr
+#' @import jsonlite
 callAPI = function(cmd, version, params = NULL, method = "GET") {
   url = getEndpoint(cmd, version)
   # print(url)
@@ -63,5 +65,8 @@ callAPI = function(cmd, version, params = NULL, method = "GET") {
   } else {
     stop("Unknown HTTP method.", call = FALSE)
   }
-  httr::content(response)
+  #
+  # This provides better output format than letting httr::content() do the parsing.
+  #
+  jsonlite::fromJSON(httr::content(response, as = "text", encoding = "UTF-8"))
 }
