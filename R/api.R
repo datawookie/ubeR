@@ -56,8 +56,6 @@ uber_estimate_time <- function(start_latitude, start_longitude, product_id = NUL
 #'
 #' @export
 uber_history <- function(limit = 5, offset = 0) {
-
-  print(parseParameters(environment()))
   data <- callAPI("history", 1.2,  method = "GET", params = parseParameters(environment()))
   history.df <- data$history
   history.df <- as.data.frame(do.call(rbind, history))
@@ -106,7 +104,7 @@ uber_requests_estimate <- function(start_latitude = NULL, start_longitude = NULL
   response <- callAPI("requests/estimate", 1, method = "POST", params = parseParameters(environment()))
   #
   response$price <- with(response$price,
-                         cbind(bind_rows(fare_breakdown), surge_multiplier, currency_code)
+                         cbind(fare_breakdown, surge_multiplier, currency_code)
   )
   #
   response
@@ -164,10 +162,5 @@ uber_places_put <- function(place_id = c("home", "work"), address) {
 #'
 #' @export
 uber_payment_methods <- function() {
-  newlist <- callAPI("payment-methods", 1)
-  payment <- newlist$payment_methods
-  payment <- lapply(payment, nullToNA)
-  df <- as.data.frame(do.call(rbind, payment))
-  df <- as.data.frame(lapply(df, unlist))
-  return(df)
+  callAPI("payment-methods", 1)
 }
