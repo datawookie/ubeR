@@ -1,11 +1,11 @@
 # SERVERID ------------------------------------------------------------------------------------------------------------
 
-set_serverid <- function(serverid) {
+uber_set_serverid <- function(serverid) {
   if (nchar(serverid) != 40) stop("Server ID should be 40 characters long.")
   assign("serverid", serverid, envir = auth_cache)
 }
 
-get_serverid <- function() {
+uber_get_serverid <- function() {
   serverid = tryCatch(
     get("serverid", envir = auth_cache),
     error = function(e) {
