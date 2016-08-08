@@ -91,15 +91,21 @@ uber_estimate_time <- function(start_latitude, start_longitude, product_id = NUL
 #' }
 #' @export
 uber_history <- function(limit = 5, offset = 0) {
-  data <- callAPI("history", 1.2,  method = "GET", params = parseParameters(environment()))
-
-    
-  history.df <- data$history
-  history.df[, c('request_time', 'start_time', 'end_time')] <- lapply(history.df[, c('request_time', 'start_time', 'end_time')], as.POSIXct, origin = "1970-01-01")
   
-   final <- list(history = history.df, limit = data$limit,
-                 offset = data$offset)
-   return(final)
+  data <- callAPI("history", 1.2,  method = "GET", params = parseParameters(environment()))
+  
+  if(limit == 0) {
+    stop("You must specify a positive number of trips to return history for.")
+  } else if (length(data$history) == 0){
+    stop("No history exists for this user.")
+  }else{
+    
+    history.df <- data$history
+    history.df.flat <- cbind(history.df %>% select(-start_city), history.df$start_city)
+    history.df.final <- history.df.flat %>% mutate(request_time = as.POSIXct(request_time, origin = "1970-01-01"),start_time = as.POSIXct(start_time, origin = "1970-01-01"), end_time = as.POSIXct(end_time, origin = "1970-01-01"))
+    
+    list(history = history.df.final, limit = data$limit, offset = data$offset)
+  }
 }
 
 # ME ------------------------------------------------------------------------------------------------------------------
