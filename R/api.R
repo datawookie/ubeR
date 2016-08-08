@@ -99,11 +99,11 @@ uber_history <- function(limit = 5, offset = 0) {
   if (length(data$history) == 0){
     history.df.final = NULL
   } else {
-    history.df <- data$history
-    history.df.flat <- cbind(history.df %>% select(-start_city), history.df$start_city)
-    history.df.final <- history.df.flat %>% mutate(request_time = as.POSIXct(request_time, origin = "1970-01-01"),
-                                                   start_time = as.POSIXct(start_time, origin = "1970-01-01"),
-                                                   end_time = as.POSIXct(end_time, origin = "1970-01-01"))
+    history.df <- data$history %>%
+      cbind(select(., -start_city), .$start_city) %>%
+      mutate(request_time = as.POSIXct(request_time, origin = "1970-01-01"),
+             start_time = as.POSIXct(start_time, origin = "1970-01-01"),
+             end_time = as.POSIXct(end_time, origin = "1970-01-01"))
   }
 
   list(history = history.df.final, limit = data$limit, offset = data$offset)
