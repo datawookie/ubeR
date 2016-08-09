@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<!-- Generator: Adobe Illustrator 19.1.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 
 <svg
    xmlns:dc="http://purl.org/dc/elements/1.1/"
@@ -9,76 +9,100 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="800"
-   height="180"
-   viewBox="0 0 799.99999 179.99999"
-   id="svg2"
    version="1.1"
+   id="Layer_1"
+   x="0px"
+   y="0px"
+   viewBox="0 0 380 500"
+   xml:space="preserve"
    inkscape:version="0.91 r13725"
-   sodipodi:docname="uber-logo.svg"
-   inkscape:export-filename="/home/colliera/proj/Z-261-ubeR/uber-logo.svg.png"
-   inkscape:export-xdpi="180"
-   inkscape:export-ydpi="180">
-  <defs
-     id="defs4" />
-  <sodipodi:namedview
-     id="base"
+   sodipodi:docname="full_icon.svg"
+   width="380"
+   height="500"><metadata
+     id="metadata34"><rdf:RDF><cc:Work
+         rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title></dc:title></cc:Work></rdf:RDF></metadata><defs
+     id="defs32" /><sodipodi:namedview
      pagecolor="#ffffff"
      bordercolor="#666666"
-     borderopacity="1.0"
-     inkscape:pageopacity="0.0"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:zoom="3.959798"
-     inkscape:cx="636.99839"
-     inkscape:cy="25.455685"
-     inkscape:document-units="px"
-     inkscape:current-layer="layer1"
-     showgrid="false"
-     units="px"
-     borderlayer="true"
-     inkscape:window-width="1559"
-     inkscape:window-height="885"
-     inkscape:window-x="41"
-     inkscape:window-y="15"
-     inkscape:window-maximized="1">
-    <inkscape:grid
+     inkscape:window-width="1600"
+     inkscape:window-height="840"
+     id="namedview30"
+     showgrid="true"
+     inkscape:zoom="1.4208333"
+     inkscape:cx="346.72216"
+     inkscape:cy="300.38357"
+     inkscape:window-x="0"
+     inkscape:window-y="31"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="Layer_1"><inkscape:grid
        type="xygrid"
-       id="grid3344" />
-  </sodipodi:namedview>
-  <metadata
-     id="metadata7">
-    <rdf:RDF>
-      <cc:Work
-         rdf:about="">
-        <dc:format>image/svg+xml</dc:format>
-        <dc:type
-           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
-      </cc:Work>
-    </rdf:RDF>
-  </metadata>
-  <g
-     inkscape:label="Layer 1"
-     inkscape:groupmode="layer"
-     id="layer1"
-     transform="translate(0,-872.36222)">
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="147.66602"
-       y="1026.6981"
-       id="text3340"
-       sodipodi:linespacing="125%"><tspan
-         sodipodi:role="line"
-         id="tspan3342"
-         x="147.66602"
-         y="1026.6981"
-         style="font-size:180px;-inkscape-font-specification:arial;font-family:arial;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal">UBER</tspan></text>
-    <path
-       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:9.33342934px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 532.32256,1035.1385 113.57563,0.091"
-       id="path3350"
+       id="grid4176" /></sodipodi:namedview><style
+     type="text/css"
+     id="style3">
+	.st0{fill:#FFFFFF;}
+	.st1{fill:url(#SVGID_1_);}
+	.st2{fill:#0066B2;}
+</style><g
+     id="g5"
+     transform="translate(-58,6)"><path
+       class="st0"
+       d="m 339.5,151.4 c -7.8,-28.1 -25.3,-48.6 -51.5,-61.3 -16.4,-8 -33.9,-10.9 -52.1,-8.6 -21.9,2.8 -41,11.7 -56.5,27.5 -20.2,20.6 -29.9,45.6 -27.8,74.5 1.8,24 11.2,44.2 27.5,60.4 -16.8,-17.2 -27.2,-40.7 -27.2,-66.7 0,-52.7 42.7,-95.4 95.4,-95.4 52.7,0 95.4,42.7 95.4,95.4 0,9.5 -1.4,18.8 -4,27.5 5.7,-17.3 5.9,-35.2 0.8,-53.3 z"
+       id="path7"
        inkscape:connector-curvature="0"
-       sodipodi:nodetypes="cc" />
-  </g>
-</svg>
+       style="fill:#ffffff" /><path
+       class="st0"
+       d="m 247.4,81.8 c -52.7,0 -95.4,42.7 -95.4,95.4 0,26 10.4,49.5 27.2,66.7 10.9,11.2 24.8,19.7 39.8,24.4 l 0,-72 0,-2.2 0,-32.5 c 0,-6.6 5.4,-11.7 12,-11.7 l 34.7,0 c 6.6,0 12.3,5.1 12.3,11.7 l 0,34.7 c 0,0.8 -0.2,1.7 -0.4,2.4 0.3,0.2 0.5,0.5 0.8,0.8 l 37.1,44.5 c 10.7,-10.9 18.8,-24.4 23.4,-39.4 2.6,-8.7 4,-17.9 4,-27.5 0,-52.6 -42.8,-95.3 -95.5,-95.3 z"
+       id="path9"
+       inkscape:connector-curvature="0"
+       style="fill:#ffffff" /><path
+       class="st0"
+       d="m 267.9,208.3 c 0,-0.1 -0.1,-0.3 -0.1,-0.3 -0.7,0.1 -1.4,0 -2.1,0 l -32.7,0 0,63.5 c 4,0.8 9.6,1.2 14.7,1.2 21.8,0 41.7,-7.3 57.8,-19.6 l -37.6,-44.8 z"
+       id="path11"
+       inkscape:connector-curvature="0"
+       style="fill:#ffffff" /><linearGradient
+       id="SVGID_1_"
+       gradientUnits="userSpaceOnUse"
+       x1="151.205"
+       y1="10.3497"
+       x2="343.16751"
+       y2="342.8385"><stop
+         offset="0"
+         style="stop-color:#073FB7"
+         id="stop14" /><stop
+         offset="1"
+         style="stop-color:#5BB6D2"
+         id="stop16" /></linearGradient><path
+       class="st1"
+       d="M 408.2,91.4 C 408.2,85.5 407.3,79.5 406,73.8 402.3,58.2 394.2,45.1 382,34.6 367.9,22.4 351.6,15.8 332.9,15.8 c -28.5,-0.1 -57,0 -85.6,0 -29.1,0 -58.2,-0.2 -87.3,0.1 C 153.7,16 147.3,17 141.3,18.7 126.5,22.9 114,31.1 104.1,43 92.7,56.6 86.2,72.1 86.2,89.8 c -0.2,57.9 -0.1,115.9 0,173.8 0,4 0.5,8 1.2,11.9 3.4,16.9 11.5,31.2 24.4,42.7 14.3,12.7 31,19.3 50.1,19.4 56.3,0.1 112.6,0 168.9,0.1 7.9,0 15.6,-1.1 23.1,-3.3 31.5,-9.2 54.4,-39.5 54.4,-72.2 0,-57.1 0.1,-113.9 -0.1,-170.8 z M 247.7,272.7 c -5.1,0 -10.7,-0.4 -14.7,-1.2 l 0,-63.5 32.7,0 c 0.7,0 1.4,0.1 2,0 0,0.1 0.1,0.1 0.1,0.2 0,0.1 0.1,0.1 0.1,0.2 l 37.4,44.8 c -16,12.2 -35.9,19.5 -57.6,19.5 z m 91.1,-68 c -4.5,15 -12.6,28.5 -23.4,39.4 l -37.2,-44.5 c -0.3,-0.3 -0.6,-0.6 -0.9,-0.8 -2.2,-1.7 -5.4,-1.8 -7.6,0.1 l -1.1,0.9 c -1.5,1.3 -2.2,3.1 -2.1,5 -0.2,-1.9 0.6,-3.8 2.1,-5.1 l 1.1,-0.9 c 2.2,-1.9 5.6,-1.8 7.8,-0.1 0.2,-0.8 0.4,-1.6 0.4,-2.4 l 0,-34.7 c 0,-6.6 -5.7,-11.7 -12.3,-11.7 l -34.6,0 c -6.6,0 -12,5.1 -12,11.7 l 0,32.5 0,2.2 0,72 c -15,-4.8 -28.9,-13.3 -39.8,-24.4 -16.4,-16.2 -25.8,-36.4 -27.5,-60.4 -2.1,-29 7.5,-53.9 27.8,-74.5 15.5,-15.8 34.6,-24.7 56.5,-27.5 18.2,-2.3 35.7,0.6 52.1,8.6 26.2,12.7 43.6,33.2 51.5,61.3 5,18.1 4.8,36 -0.8,53.3 z"
+       id="path18"
+       inkscape:connector-curvature="0"
+       style="fill:url(#SVGID_1_)" /></g><g
+     id="g20"
+     transform="translate(-58,6)"><path
+       class="st2"
+       d="m 103.1,448.5 0,-44.5 14,0 0,42.4 c 0,5.4 1.3,9.4 4,11.9 2.7,2.5 6,3.7 9.9,3.7 1.9,0 3.8,-0.3 5.6,-0.9 1.8,-0.6 3.3,-1.5 4.6,-2.8 1.3,-1.3 2.3,-2.9 3.1,-4.9 0.8,-2 1.1,-4.3 1.1,-7 l 0,-42.4 14,0 0,69.7 -13.7,0 0,-7 c -2.4,2.6 -5.2,4.6 -8.5,5.9 -3.3,1.3 -6.6,1.9 -10.1,1.9 -3.6,0 -6.8,-0.5 -9.7,-1.6 -2.9,-1.1 -5.4,-2.7 -7.5,-4.7 -2.6,-2.6 -4.5,-5.6 -5.5,-8.9 -0.8,-3.2 -1.3,-6.9 -1.3,-10.8 z"
+       id="path22"
+       inkscape:connector-curvature="0"
+       style="fill:#0066b2" /><path
+       class="st2"
+       d="m 181.9,473.7 0,-97.9 14,0 0,35.1 c 2.6,-3 5.3,-5.1 8.2,-6.2 2.9,-1.1 6.3,-1.6 10,-1.6 3.5,0 6.7,0.6 9.6,1.7 2.9,1.1 5.4,2.6 7.3,4.6 1.7,1.7 3.1,3.8 4.2,6 1.1,2.3 1.9,4.7 2.4,7.3 0.6,2.6 0.9,5.2 1,8 0.1,2.7 0.2,5.4 0.2,8.1 0,2.6 -0.1,5.3 -0.2,8.1 -0.1,2.8 -0.5,5.4 -1,8.1 -0.6,2.6 -1.4,5.1 -2.4,7.4 -1.1,2.3 -2.5,4.3 -4.2,6 -1.9,1.9 -4.4,3.4 -7.4,4.5 -3,1.1 -6.2,1.6 -9.7,1.6 -3.9,0 -7.2,-0.6 -10.1,-1.7 -2.9,-1.1 -5.7,-3.3 -8.3,-6.5 l 0,7.5 -13.6,0 z m 14,-35 c 0,3.1 0.2,6.1 0.5,8.9 0.3,2.8 1,5.3 2,7.4 1.1,2.2 2.5,3.9 4.4,5.1 1.9,1.2 4.4,1.8 7.7,1.8 3.1,0 5.7,-0.6 7.6,-1.8 1.9,-1.2 3.4,-2.9 4.4,-5.1 1,-2.2 1.7,-4.7 2,-7.5 0.3,-2.8 0.5,-5.8 0.5,-8.8 0,-3.1 -0.2,-6.1 -0.5,-8.9 -0.3,-2.8 -1,-5.3 -2,-7.4 -1,-2.1 -2.5,-3.8 -4.4,-5 -1.9,-1.2 -4.5,-1.8 -7.6,-1.8 -3.2,0 -5.8,0.6 -7.7,1.8 -1.9,1.2 -3.3,2.9 -4.4,5 -1.1,2.1 -1.7,4.6 -2,7.4 -0.3,2.8 -0.5,5.8 -0.5,8.9 z"
+       id="path24"
+       inkscape:connector-curvature="0"
+       style="fill:#0066b2" /><path
+       class="st2"
+       d="m 254.3,438.8 c 0,-11.4 2.7,-20.2 8,-26.4 5.3,-6.2 12.5,-9.3 21.5,-9.3 4.7,0 8.8,0.8 12.5,2.5 3.7,1.7 6.8,4 9.3,6.9 2.5,2.9 4.5,6.5 5.8,10.6 1.3,4.1 2,8.7 2,13.6 l 0,6.2 -45.3,0 c 0,6.1 1.5,10.9 4.6,14.4 3.1,3.5 7.5,5.3 13.3,5.3 3.9,0 7.1,-0.6 9.6,-1.7 2.4,-1.2 4.9,-3 7.4,-5.4 l 8.9,8.4 c -1.8,1.8 -3.7,3.4 -5.4,4.7 -1.8,1.3 -3.7,2.4 -5.8,3.4 -2.1,0.9 -4.3,1.6 -6.8,2 -2.5,0.4 -5.2,0.7 -8.2,0.7 -4.4,0 -8.5,-0.6 -12.3,-1.8 -3.8,-1.2 -7.1,-3.2 -9.9,-6 -2.8,-2.8 -5,-6.5 -6.6,-11.1 -1.7,-4.9 -2.6,-10.4 -2.6,-17 z m 13.8,-5.7 31.4,0 c -0.1,-2.1 -0.2,-3.8 -0.5,-5.1 -0.2,-1.3 -0.7,-2.7 -1.4,-4.2 -1.1,-2.6 -2.9,-4.7 -5.2,-6.3 -2.4,-1.6 -5.2,-2.4 -8.5,-2.4 -3.3,0 -6.2,0.8 -8.6,2.4 -2.4,1.6 -4.2,3.7 -5.3,6.4 -0.7,1.5 -1.2,3 -1.4,4.3 -0.3,1.2 -0.4,2.9 -0.5,4.9 z"
+       id="path26"
+       inkscape:connector-curvature="0"
+       style="fill:#0066b2" /><path
+       class="st2"
+       d="m 333.6,473.7 0,-97.9 38,0 c 4.7,0 8.8,0.7 12.6,2.1 3.7,1.4 6.9,3.4 9.6,5.9 2.7,2.5 4.7,5.6 6.1,9.1 1.4,3.5 2.1,7.4 2.1,11.5 0,7 -1.9,12.7 -5.6,17 -3.8,4.3 -8.4,7.2 -13.8,8.8 l 22.5,43.5 -17.3,0 -20.8,-41.4 -18.6,0 0,41.4 -14.8,0 z m 14.8,-53.9 22,0 c 5,0 9,-1.3 12.1,-4 3.1,-2.7 4.6,-6.4 4.6,-11.2 0,-4.9 -1.5,-8.7 -4.6,-11.4 -3.1,-2.7 -7.1,-4.1 -12.1,-4.1 l -22,0 0,30.7 z"
+       id="path28"
+       inkscape:connector-curvature="0"
+       style="fill:#0066b2" /></g></svg>
