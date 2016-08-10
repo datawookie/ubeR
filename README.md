@@ -2,9 +2,13 @@
 
 # Installation
 
-You should install the development version of the `httr` package.
+You should first install the development version of the `httr` package.
 ```
 devtools::install_github("hadley/httr")
+```
+Then go ahead and install the ubeR package.
+```
+devtools::install_github("DataWookie/ubeR")
 ```
 
 # Uber Application Setup

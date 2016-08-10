@@ -41,6 +41,7 @@ DELETE <- function(url, body = NULL) {
 
 #' @import httr
 #' @import jsonlite
+#' @import utils
 callAPI = function(cmd, version, params = NULL, method = "GET") {
   url = getEndpoint(cmd, version)
   # print(url)

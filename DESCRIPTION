@@ -1,13 +1,25 @@
 Package: ubeR
 Type: Package
-Title: What the Package Does (Title Case)
+Title: Interface to the Uber API
 Version: 0.1.0
-Author: c(
+Authors@R: c(
   person("Andrew", "Collier", email = "andrew@exegetic.biz", role = c("aut", "cre")),
   person("Arthur", "Wu", email = "arthurwu1@gmail.com", role = c("aut"))
   )
-Description: More about what it does (maybe more than one line)
-License: What license is it under?
+Author: Andrew Collier [aut, cre],
+  Arthur Wu [aut]
+Maintainer: Andrew Collier <andrew@exegetic.biz>
+Description: Functions for interacting with the Uber API.
+License: GPL-3
 LazyData: TRUE
-Suggests: testthat
-Imports: httr, jsonlite
+URL: http://github.com/DataWookie/ubeR
+BugReports: https://github.com/DataWookie/ubeR/issues
+Depends:
+    R (>= 2.12.0)
+Imports:
+    httr,
+    jsonlite,
+    ggmap
+Suggests:
+    testthat
+RoxygenNote: 5.0.1
