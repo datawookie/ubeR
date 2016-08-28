@@ -108,7 +108,7 @@ uber_history <- function(limit = 5, offset = 0) {
              end_time = as.POSIXct(end_time, origin = "1970-01-01"))
   }
 
-  list(history = history.df.final, limit = data$limit, offset = data$offset)
+  history.df.final
 }
 
 # ME ------------------------------------------------------------------------------------------------------------------
