@@ -1,3 +1,5 @@
+![](https://cdn.rawgit.com/DataWookie/ubeR/master/uber-logo.svg)
+
 ![](uber-logo.svg)
 
 # Installation
