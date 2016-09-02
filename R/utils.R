@@ -22,6 +22,7 @@ getEndpoint <- function(cmd, version = 1) {
   paste("https://sandbox-api.uber.com/v", version, '/', cmd, sep='')
 }
 
+#' @import maps
 #' @import ggmap
 geocode <- function(location) {
   suppressMessages(ggmap::geocode(location))
