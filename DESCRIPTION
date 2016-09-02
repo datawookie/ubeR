@@ -19,7 +19,6 @@ Depends:
 Imports:
     httr,
     jsonlite,
-    maps,
     ggmap,
     dplyr
 Suggests:
