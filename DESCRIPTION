@@ -19,7 +19,9 @@ Depends:
 Imports:
     httr,
     jsonlite,
-    ggmap
+    maps,
+    ggmap,
+    dplyr
 Suggests:
     testthat
 RoxygenNote: 5.0.1
