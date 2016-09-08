@@ -1,7 +1,7 @@
 Package: ubeR
 Type: Package
 Title: Interface to the Uber API
-Version: 0.1.0
+Version: 0.1.1
 Authors@R: c(
   person("Andrew", "Collier", email = "andrew@exegetic.biz", role = c("aut", "cre")),
   person("Arthur", "Wu", email = "arthurwu1@gmail.com", role = c("aut"))

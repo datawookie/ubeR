@@ -23,6 +23,7 @@ getEndpoint <- function(cmd, version = 1) {
 }
 
 #' @import ggmap
+#' @importFrom stats na.omit
 geocode <- function(location) {
   position <- na.omit(suppressWarnings(suppressMessages(ggmap::geocode(location))))
   if (nrow(position) == 0) {

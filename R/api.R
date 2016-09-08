@@ -94,6 +94,7 @@ uber_estimate_time <- function(start_latitude = NULL, start_longitude = NULL, st
 #' uber_history()
 #' }
 #' @import dplyr
+#' @importFrom stats setNames
 #' @export
 uber_history <- function(limit = 5, offset = 0) {
   if(limit <= 0) {
