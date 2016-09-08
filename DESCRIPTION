@@ -1,7 +1,7 @@
 Package: ubeR
 Type: Package
 Title: Interface to the Uber API
-Version: 0.1.1
+Version: 0.1.2
 Authors@R: c(
   person("Andrew", "Collier", email = "andrew@exegetic.biz", role = c("aut", "cre")),
   person("Arthur", "Wu", email = "arthurwu1@gmail.com", role = c("aut"))
@@ -15,7 +15,10 @@ LazyData: TRUE
 URL: http://github.com/DataWookie/ubeR
 BugReports: https://github.com/DataWookie/ubeR/issues
 Depends:
-    R (>= 2.12.0)
+    R (>= 2.12.0),
+    googleway,
+    ggplot2,
+    ggthemes
 Imports:
     httr,
     jsonlite,
