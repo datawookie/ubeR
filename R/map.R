@@ -19,9 +19,11 @@
 #' \dontrun{
 #' SFmap <- route_map(start_latitude = 37.761492, start_longitude = -122.423941, 
 #'                    end_latitude = 37.788282, end_longitude = -122.406713)
+#' SFmap
 #' AUmap <- route_map(start_address = "Sydney, Australia", 
 #'                    end_address = "Melbourne, Australia", 
 #'                    zoom = 7)
+#' AUmap
 #' }
 #' @export
 route_map <- function(start_latitude = NULL, start_longitude = NULL, 
@@ -34,7 +36,7 @@ route_map <- function(start_latitude = NULL, start_longitude = NULL,
   origin      <- c(params$start_latitude, params$start_longitude)
   destination <- c(params$end_latitude, params$end_longitude)
   
-  gd <- google_directions(origin = origin, destination = destination, key = key)
+  gd <- googleway::google_directions(origin = origin, destination = destination, key = key)
   pl <- gd$routes$overview_polyline$points
   df <- googleway::decode_pl(pl)
 
