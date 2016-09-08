@@ -38,6 +38,8 @@ uber_products <- function(latitude = NA, longitude = NA, product_id = NA) {
 #' @param start_longitude Initial longitude.
 #' @param end_latitude    Final latitude.
 #' @param end_longitude   Final longitude.
+#' @param start_address   Initial address.
+#' @param end_address     Final address.
 #' @param seat_count      Number of passengers.
 #' @references
 #' \url{https://developer.uber.com/docs/rides/api/v1-estimates-price}
@@ -47,7 +49,8 @@ uber_products <- function(latitude = NA, longitude = NA, product_id = NA) {
 #'                     end_latitude = 37.775393, end_longitude = -122.417546)
 #' }
 #' @export
-uber_estimate_price <- function(start_latitude, start_longitude, end_latitude, end_longitude, seat_count = NULL) {
+uber_estimate_price <- function(start_latitude = NULL, start_longitude = NULL, end_latitude = NULL, end_longitude = NULL,
+                                start_address = NULL, end_address = NULL, seat_count = NULL) {
   estimates = callAPI("estimates/price", 1, method = "GET", params = parseParameters(environment()))
   #
   estimates$prices
@@ -59,6 +62,7 @@ uber_estimate_price <- function(start_latitude, start_longitude, end_latitude, e
 #'
 #' @param start_latitude  Initial latitude.
 #' @param start_longitude Initial longitude.
+#' @param start_address   Initial address.
 #' @param product_id      Unique identifier representing a specific product.
 #' @references
 #' \url{https://developer.uber.com/docs/rides/api/v1-estimates-time}
@@ -67,7 +71,7 @@ uber_estimate_price <- function(start_latitude, start_longitude, end_latitude, e
 #' uber_estimate_time(start_latitude = 37.761492, start_longitude = -122.423941)
 #' }
 #' @export
-uber_estimate_time <- function(start_latitude, start_longitude, product_id = NULL) {
+uber_estimate_time <- function(start_latitude = NULL, start_longitude = NULL, start_address = NULL, product_id = NULL) {
   estimates = callAPI("estimates/time", 1, method = "GET", params = parseParameters(environment()))
   #
   estimates$times

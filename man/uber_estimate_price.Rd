@@ -4,8 +4,9 @@
 \alias{uber_estimate_price}
 \title{Price estimate}
 \usage{
-uber_estimate_price(start_latitude, start_longitude, end_latitude,
-  end_longitude, seat_count = NULL)
+uber_estimate_price(start_latitude = NULL, start_longitude = NULL,
+  end_latitude = NULL, end_longitude = NULL, start_address = NULL,
+  end_address = NULL, seat_count = NULL)
 }
 \arguments{
 \item{start_latitude}{Initial latitude.}
@@ -15,6 +16,10 @@ uber_estimate_price(start_latitude, start_longitude, end_latitude,
 \item{end_latitude}{Final latitude.}
 
 \item{end_longitude}{Final longitude.}
+
+\item{start_address}{Initial address.}
+
+\item{end_address}{Final address.}
 
 \item{seat_count}{Number of passengers.}
 }

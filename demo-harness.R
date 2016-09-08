@@ -12,7 +12,7 @@ UBER_CLIENTSECRET = Sys.getenv("UBER_CLIENTSECRET")
 
 # REQUIRE OAUTH -------------------------------------------------------------------------------------------------------
 
-uber_oauth(UBER_CLIENTID, UBER_CLIENTSECRET, TRUE)
+uber_oauth(UBER_CLIENTID, UBER_CLIENTSECRET, FALSE)
 
 (identity <- uber_me())
 uber_payment_methods()
@@ -37,7 +37,11 @@ estimate <- uber_requests_estimate(start_latitude = -33.899656, start_longitude 
 estimate <- uber_estimate_price(start_latitude = -33.899656, start_longitude = 18.407663,
                     end_latitude = -33.927443, end_longitude = 18.457557)
 
+uber_estimate_price(start_address = "37 Beach Road, Mouille Point, Cape Town",
+                    end_address = "100 St Georges Mall, Cape Town City Centre, Cape Town, 8001")
+
 uber_estimate_time(start_latitude = -33.899656, start_longitude = 18.407663)
+uber_estimate_time(start_address = "37 Beach Road, Mouille Point, Cape Town")
 
 ride <- uber_requests(start_address = "37 Beach Road, Mouille Point, Cape Town",
                       end_address = "100 St Georges Mall, Cape Town City Centre, Cape Town, 8001")

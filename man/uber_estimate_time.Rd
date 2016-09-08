@@ -4,12 +4,15 @@
 \alias{uber_estimate_time}
 \title{Time estimate}
 \usage{
-uber_estimate_time(start_latitude, start_longitude, product_id = NULL)
+uber_estimate_time(start_latitude = NULL, start_longitude = NULL,
+  start_address = NULL, product_id = NULL)
 }
 \arguments{
 \item{start_latitude}{Initial latitude.}
 
 \item{start_longitude}{Initial longitude.}
+
+\item{start_address}{Initial address.}
 
 \item{product_id}{Unique identifier representing a specific product.}
 }

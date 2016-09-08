@@ -21,7 +21,8 @@ If \code{cache = TRUE} then the authentication token will be stored in a \code{.
 }
 \examples{
 \dontrun{
-uber_oauth("ReTZRlEGNnzkitsn-A23MiXbnMNzdQf8", "NpWYGY8W7cv63tfM2neciVpjZOAF_wx1GHRG94A2")
+uber_oauth("ReTZRlEGNnzkitsn-A23MiXbnMNzdQf8",
+           "NpWYGY8W7cv63tfM2neciVpjZOAF_wx1GHRG94A2")
 }
 }
 \seealso{
