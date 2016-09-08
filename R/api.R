@@ -89,6 +89,7 @@ uber_estimate_time <- function(start_latitude, start_longitude, product_id = NUL
 #' \dontrun{
 #' uber_history()
 #' }
+#' @import dplyr
 #' @export
 uber_history <- function(limit = 5, offset = 0) {
   if(limit <= 0) {
@@ -100,14 +101,11 @@ uber_history <- function(limit = 5, offset = 0) {
   if (length(data$history) == 0){
     history.df.final = NULL
   } else {
-    history.df.final <- data$history %>%
-      select(., -start_city) %>%
+    times <- c("request_time", "start_time", "end_time")
+    history.df.final <- select_(data$history, .dots = c("-start_city")) %>%
       cbind(data$history$start_city) %>%
-      mutate(request_time = as.POSIXct(request_time, origin = "1970-01-01"),
-             start_time = as.POSIXct(start_time, origin = "1970-01-01"),
-             end_time = as.POSIXct(end_time, origin = "1970-01-01"))
+      mutate_(.dots = setNames(paste0('as.POSIXct(',times,', origin = "1970-01-01")'), times))
   }
-
   history.df.final
 }
 
