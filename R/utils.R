@@ -24,7 +24,11 @@ getEndpoint <- function(cmd, version = 1) {
 
 #' @import ggmap
 geocode <- function(location) {
-  suppressMessages(ggmap::geocode(location))
+  position <- na.omit(suppressWarnings(suppressMessages(ggmap::geocode(location))))
+  if (nrow(position) == 0) {
+    stop(sprintf("Unable to find location '%s'.", location), call. = FALSE)
+  }
+  position
 }
 
 nullToNA <- function(x) {
