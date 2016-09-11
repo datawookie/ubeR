@@ -8,12 +8,12 @@
 #' @param start_latitude Initial latitude.
 #' @param start_longitude Initial longitude.
 #' @param end_latitude Final latitude.
-#' @param end_longitude Final longitude
+#' @param end_longitude Final longitude.
 #' @param start_address Initial address.
 #' @param end_address Final address.
-#' @param key Google Maps API key (optional)
-#'
-#' @return a \code{ggplot2} graphics object
+#' @param key Google Maps API key (optional).
+#' @param zoom Map zoom, an integer from 3 (continent) to 21 (building).
+#' @return A \code{ggplot2} graphics object.
 #' @examples
 #' \dontrun{
 #' route_map(start_address = "37 Beach Road, Mouille Point, Cape Town",
@@ -33,6 +33,6 @@ route_map <- function(start_latitude = NULL, start_longitude = NULL,
 
   mean_map <- ggmap::get_map(location = c(mean(df$lon), mean(df$lat)), zoom = zoom, maptype = "roadmap")
   ggmap::ggmap(mean_map) +
-      ggplot2::geom_path(data = df, aes(x = lon, y = lat), col = "steelblue", lwd = 2) +
+      ggplot2::geom_path(data = df, ggplot2::aes_string(x = "lon", y = "lat"), col = "steelblue", lwd = 2) +
       ggthemes::theme_map()
 }

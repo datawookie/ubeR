@@ -15,16 +15,18 @@ route_map(start_latitude = NULL, start_longitude = NULL,
 
 \item{end_latitude}{Final latitude.}
 
-\item{end_longitude}{Final longitude}
+\item{end_longitude}{Final longitude.}
 
 \item{start_address}{Initial address.}
 
 \item{end_address}{Final address.}
 
-\item{key}{Google Maps API key (optional)}
+\item{key}{Google Maps API key (optional).}
+
+\item{zoom}{Map zoom, an integer from 3 (continent) to 21 (building).}
 }
 \value{
-a \code{ggplot2} graphics object
+A \code{ggplot2} graphics object.
 }
 \description{
 A map, centered at the mean of the start and end locations, is accessed via
