@@ -4,10 +4,12 @@ Title: Interface to the Uber API
 Version: 0.1.2
 Authors@R: c(
   person("Andrew", "Collier", email = "andrew@exegetic.biz", role = c("aut", "cre")),
-  person("Arthur", "Wu", email = "arthurwu1@gmail.com", role = c("aut"))
+  person("Arthur", "Wu", email = "arthurwu1@gmail.com", role = c("aut")),
+  person("Jonathan","Carroll", email = "rpkg@@jcarroll.com.au", role = c("ctb"))
   )
 Author: Andrew Collier [aut, cre],
-  Arthur Wu [aut]
+  Arthur Wu [aut],
+  Jonathan Carroll [ctb]
 Maintainer: Andrew Collier <andrew@exegetic.biz>
 Description: Functions for interacting with the Uber API.
 License: GPL-3

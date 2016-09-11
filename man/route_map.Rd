@@ -24,24 +24,18 @@ route_map(start_latitude = NULL, start_longitude = NULL,
 \item{key}{Google Maps API key (optional)}
 }
 \value{
-a \code{ggplot2} graphics object (the map with route)
+a \code{ggplot2} graphics object
 }
 \description{
-A map, centered at the mean of the start and end locations, is accessed via 
-\code{\link[ggmap]{get_map}} and a suitable driving route between these 
+A map, centered at the mean of the start and end locations, is accessed via
+\code{\link[ggmap]{get_map}} and a suitable driving route between these
 points is constructed using \code{\link[googleway]{google_directions}} then
 added to the map.
 }
 \examples{
 \dontrun{
-SFmap <- route_map(start_latitude = 37.761492, start_longitude = -122.423941, 
-                   end_latitude = 37.788282, end_longitude = -122.406713)
-AUmap <- route_map(start_address = "Sydney, Australia", 
-                   end_address = "Melbourne, Australia", 
-                   zoom = 7)
+route_map(start_address = "37 Beach Road, Mouille Point, Cape Town",
+          end_address = "100 St Georges Mall, Cape Town City Centre, Cape Town")
 }
-}
-\author{
-Jonathan Carroll, \email{rpkg@jcarroll.com.au}
 }
 
