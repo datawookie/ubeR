@@ -5,7 +5,7 @@ Version: 0.1.2
 Authors@R: c(
   person("Andrew", "Collier", email = "andrew@exegetic.biz", role = c("aut", "cre")),
   person("Arthur", "Wu", email = "arthurwu1@gmail.com", role = c("aut")),
-  person("Jonathan","Carroll", email = "rpkg@@jcarroll.com.au", role = c("ctb"))
+  person("Jonathan","Carroll", email = "rpkg@jcarroll.com.au", role = c("ctb"))
   )
 Author: Andrew Collier [aut, cre],
   Arthur Wu [aut],
@@ -17,15 +17,15 @@ LazyData: TRUE
 URL: http://github.com/DataWookie/ubeR
 BugReports: https://github.com/DataWookie/ubeR/issues
 Depends:
-    R (>= 2.12.0),
-    googleway,
-    ggplot2,
-    ggthemes
+    R (>= 2.12.0)
 Imports:
     httr,
     jsonlite,
     ggmap,
-    dplyr
+    dplyr,
+    googleway,
+    ggplot2,
+    ggthemes
 Suggests:
     testthat
 RoxygenNote: 5.0.1
