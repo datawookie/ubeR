@@ -1,5 +1,7 @@
 ![](https://cdn.rawgit.com/DataWookie/ubeR/master/uber-logo.svg)
 
+[![Build Status](https://travis-ci.org/DataWookie/ubeR.svg?branch=master)](https://travis-ci.org/DataWookie/ubeR)
+
 # Installation
 
 You should first install the development version of the `httr` package.
