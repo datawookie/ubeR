@@ -5,3 +5,4 @@
 \.RData$
 demo-harness.R
 setup-environment.R
+^\.travis\.yml$
