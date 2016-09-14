@@ -1,12 +1,14 @@
 parseParameters <- function(call) {
   params = as.list(call)
 
-  if ("start_address" %in% names(params)) {
+  # Addresses take precedence over coordinates if both are provided.
+  #
+  if (!is.null(params$start_address)) {
     geo = suppressMessages(geocode(params$start_address))
     params$start_latitude = geo$lat
     params$start_longitude = geo$lon
   }
-  if ("end_address" %in% names(params)) {
+  if (!is.null(params$end_address)) {
     geo = suppressMessages(geocode(params$end_address))
     params$end_latitude = geo$lat
     params$end_longitude = geo$lon
