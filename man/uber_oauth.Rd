@@ -4,7 +4,7 @@
 \alias{uber_oauth}
 \title{Authenticate with the Uber API}
 \usage{
-uber_oauth(client_key, client_secret, cache = FALSE)
+uber_oauth(client_key, client_secret, cache = TRUE)
 }
 \arguments{
 \item{client_key}{The client key provided by Uber.}
