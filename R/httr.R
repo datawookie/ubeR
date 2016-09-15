@@ -48,6 +48,12 @@ callAPI = function(cmd, version, params = NULL, method = "GET") {
   url = getEndpoint(cmd, version)
   # print(url)
 
+  # Check whether endpoint is accessible.
+  #
+  check.url = try(httr::HEAD(url), silent = TRUE)
+  #
+  if (class(check.url) == "try-error") stop("Unable to reach ", url, ". Check network connection?", call. = FALSE)
+
   params = params[!sapply(params, is.na)]
 
   if (method == "POST") {
