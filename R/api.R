@@ -104,14 +104,14 @@ uber_history <- function(limit = 5, offset = 0) {
   }
 
   if (length(data$history) == 0){
-    history.df.final = NULL
+    history.df = NULL
   } else {
     times <- c("request_time", "start_time", "end_time")
-    history.df.final <- select_(data$history, .dots = c("-start_city")) %>%
+    history.df <- select_(data$history, .dots = c("-start_city")) %>%
       cbind(data$history$start_city) %>%
       mutate_(.dots = setNames(paste0('as.POSIXct(',times,', origin = "1970-01-01")'), times))
   }
-  history.df.final
+  history.df
 }
 
 # ME ------------------------------------------------------------------------------------------------------------------
