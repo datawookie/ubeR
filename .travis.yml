@@ -3,6 +3,9 @@ cache: packages
 notifications:
   email:
     recipients:
-      - andrew@exegetic.biz
+    - andrew@exegetic.biz
     on_success: always
     on_failure: always
+env:
+  matrix:
+    secure: bgUHzlN/1Le17ACjIj/z2R4hKJcRer2KmPuH25s0XwbLKSh2+/90XPrO3wlyK1brNE+sliWXh/vJ+oiljuH50pUWfqmb/ocZU3j95zMYJc7n62QPf8ZGa/DXEaY3lUjPqkFW+a9wjdYnkpM7z3da715qjlpM/AJ9gIw/qAaDK0NCAtaFS7xXRATciWlHrRBtGDVBxnVnBwMBQbXOOduQI9BhX9TcV84z0SijVR4Q1RdY+iB+tng82miFKdoy+5yelIx38bwpn8hahFh5KHPg106unzsqtjQAMwFGu42HPHyS/KLwG5p3QG5eJZklfCJHaeNBZN+NDtGVepOVEg5VupjCYvuPigE1IOkqMrMAVZo3iLcTn/loAj0uUv9u8CazwzPvrkvmdvKiVd6Mu/BJwEvOo4YudzYRx9o+ErifUtD8M+9Av8oErbbSjmlBj9mLzJREGI9aH+uFLltalWSZFihMMWw/RprqdEZUf9cmF/wnVHS2zXWNaJdQa1TMO11OP+ZyZeqQ7F2Fob1sg6B5XtA+wdeiM4CTz9xEcFgHawIU5SKCmwjT4Wth2w1PLUG8+FhFyVTyvQlAY9BMWN0G2Sss0wESoCCQQHd1ASqa2gdiA7t0fU29D76bTJIbSEpm44ior+iJGUm2Y2W2vUZpYrVwL9r1jnfFIdh1yQxJXhM=
