@@ -1,0 +1,8 @@
+language: r
+cache: packages
+notifications:
+  email:
+    recipients:
+      - andrew@exegetic.biz
+    on_success: always
+    on_failure: always
