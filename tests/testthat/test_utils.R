@@ -6,7 +6,7 @@ test_that("raise error on fail to geocode", {
 
 test_that("this will fail", {
   print("this will fail!")
-  print(Sys.getenv("MY_SECRET_ENV"))
+  print(Sys.getenv("UBER_CLIENTSECRET"))
   expect_equal(1, 0)
 })
 
