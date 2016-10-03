@@ -4,7 +4,7 @@
 \alias{uber_oauth}
 \title{Authenticate with the Uber API}
 \usage{
-uber_oauth(client_key, client_secret, cache = FALSE)
+uber_oauth(client_key, client_secret, cache = TRUE)
 }
 \arguments{
 \item{client_key}{The client key provided by Uber.}
@@ -21,6 +21,7 @@ If \code{cache = TRUE} then the authentication token will be stored in a \code{.
 }
 \examples{
 \dontrun{
+# The key/secret combination below is not valid.
 uber_oauth("ReTZRlEGNnzkitsn-A23MiXbnMNzdQf8",
            "NpWYGY8W7cv63tfM2neciVpjZOAF_wx1GHRG94A2")
 }

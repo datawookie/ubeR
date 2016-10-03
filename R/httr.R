@@ -1,3 +1,8 @@
+#' Parse parameters for API requests
+#'
+#' Provide consistent parsing of API request parameters.
+#'
+#' @keywords internal
 parseParameters <- function(call) {
   params = as.list(call)
 
@@ -24,29 +29,61 @@ parseParameters <- function(call) {
   params
 }
 
+#' Send GET request to a server
+#'
+#' A wrapper around httr::GET().
+#'
+#' @keywords internal
 GET <- function(url, query = NULL) {
-  # httr::GET(url, query = query, httr::add_headers(Authorization = paste("Token", get_serverid())))
   httr::GET(url, httr::config(token = get_oauth_token()), query = query)
 }
 
+#' Send POST request to a server
+#'
+#' A wrapper around httr::POST().
+#'
+#' @keywords internal
 POST <- function(url, body = NULL) {
   httr::POST(url, httr::config(token = get_oauth_token()), encode = "json", body = body)
 }
 
+#' Send PUT request to a server
+#'
+#' A wrapper around httr::PUT().
+#'
+#' @keywords internal
 PUT <- function(url, body = NULL) {
   httr::PUT(url, httr::config(token = get_oauth_token()), encode = "json", body = body)
 }
 
+#' Send DELETE request to a server
+#'
+#' A wrapper around httr::DELETE().
+#'
+#' @keywords internal
 DELETE <- function(url, body = NULL) {
   httr::DELETE(url, httr::config(token = get_oauth_token()), encode = "json", body = body)
 }
 
+#' Handle interactions with the Uber API
+#'
+#' @param cmd Specifies the endpoint.
+#' @param version The version of the API for particular endpoint.
+#' @param params Data passed with request.
+#' @param method Type of request.
+#'
+#' @keywords internal
 #' @import httr
 #' @import jsonlite
 #' @import utils
-callAPI = function(cmd, version, params = NULL, method = "GET") {
+callAPI <- function(cmd, version, params = NULL, method = "GET") {
   url = getEndpoint(cmd, version)
-  # print(url)
+
+  # Check whether endpoint is accessible.
+  #
+  check.url = try(httr::HEAD(url), silent = TRUE)
+  #
+  if (class(check.url) == "try-error") stop("Unable to reach ", url, ". Check network connection?", call. = FALSE)
 
   params = params[!sapply(params, is.na)]
 

@@ -32,11 +32,14 @@ uber_get_serverid <- function() {
 #' @seealso \code{\link[httr]{oauth_app}}.
 #' @examples
 #' \dontrun{
+#' # The key/secret combination below is not valid.
 #' uber_oauth("ReTZRlEGNnzkitsn-A23MiXbnMNzdQf8",
 #'            "NpWYGY8W7cv63tfM2neciVpjZOAF_wx1GHRG94A2")
 #' }
+#' @import httr
+#' @import httpuv
 #' @export
-uber_oauth <- function(client_key, client_secret, cache = FALSE) {
+uber_oauth <- function(client_key, client_secret, cache = TRUE) {
   endpoint <- httr::oauth_endpoint(
     authorize = "https://login.uber.com/oauth/v2/authorize",
     access    = "https://login.uber.com/oauth/v2/token"
