@@ -57,3 +57,66 @@ The following endpoints still need to be managed:
     GET /v1/reminders/{reminder_id}
     PATCH /v1/reminders/{reminder_id}
     DELETE /v1/reminders/{reminder_id
+
+
+## Usage
+
+Here's an example of taking the ubeR package through its paces. First load the package.
+
+    library(ubeR)
+
+Next get the ID and secret used for authenticating with Uber. Below these are retrieved from the environment.
+
+    UBER_CLIENTID = Sys.getenv("UBER_CLIENTID")
+    UBER_CLIENTSECRET = Sys.getenv("UBER_CLIENTSECRET")
+    
+Authenticate.
+
+    uber_oauth(UBER_CLIENTID, UBER_CLIENTSECRET, FALSE)
+
+Retrieve information on the user and his methods of payment.
+
+    uber_me()
+    uber_payment_methods()
+
+Retrieve the predefined locations for the authenticated account.
+
+    uber_places_get()
+    uber_places_get("home")
+    uber_places_get("work")
+
+Retrieve history of recent rides as a `data.frame`.
+
+    uber_history()
+
+Find the cars in the vicinity of a specific location or focus on a particular car.
+
+    uber_products(latitude = -33.925278, longitude = 18.423889)
+    uber_products(product_id = "91901472-f30d-4614-8ba7-9fcc937cebf5")
+
+General estimate for a trip between two locations.
+
+    uber_requests_estimate(start_latitude = -33.899656, start_longitude = 18.407663,
+                           end_latitude = -33.927443, end_longitude = 18.457557)
+
+Price estimate for a trip specified by either latitude and longitude or address.
+
+    uber_estimate_price(start_latitude = -33.899656, start_longitude = 18.407663,
+                        end_latitude = -33.927443, end_longitude = 18.457557)
+    uber_estimate_price(start_address = "37 Beach Road, Mouille Point, Cape Town",
+                        end_address = "100 St Georges Mall, Cape Town City Centre, Cape Town, 8001")
+
+Time estimate for a trip specified by either latitude and longitude or address.
+
+    uber_estimate_time(start_latitude = -33.899656, start_longitude = 18.407663)
+    uber_estimate_time(start_address = "37 Beach Road, Mouille Point, Cape Town")
+
+Request a ride. The package is currently wired to the sandbox server, so this will not result in a real ride. We'll shortly point the code at the real server.
+
+    uber_requests(start_address = "37 Beach Road, Mouille Point, Cape Town",
+                  end_address = "100 St Georges Mall, Cape Town City Centre, Cape Town, 8001")
+
+Get information on current request and delete it.
+
+    uber_requests_current()
+    uber_requests_current_delete()
