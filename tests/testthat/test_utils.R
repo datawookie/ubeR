@@ -4,12 +4,6 @@ test_that("raise error on fail to geocode", {
   expect_error(geocode("The Old Biscuit Mill"), "Unable to find location 'The Old Biscuit Mill'.")
 })
 
-test_that("this will fail", {
-  print("this will fail!")
-  print(Sys.getenv("UBER_CLIENTSECRET"))
-  expect_equal(1, 0)
-})
-
 test_that("check.latitude() fails for invalid latitudes", {
   expect_error(check.latitude(-95))
   expect_error(check.latitude(+95))
