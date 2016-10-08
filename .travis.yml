@@ -6,6 +6,12 @@ notifications:
     - andrew@exegetic.biz
     on_success: always
     on_failure: always
+# For test coverage.
+r_github_packages:
+  - jimhester/covr
+after_success:
+  - Rscript -e 'covr::codecov()'
+# Encrypted environment variables.
 env:
   matrix:
     secure: bmWiqz3kOBcXuc5TZ9PcPhOuvD/SY6lqZOq37st8q1m2lf3q+FZh+OPaPziHd3ma+aM4oDS4tP823t1Ow+cnOi/xxBp/bv5FHjgiBo/mjYusudIUZDuXB0ug6fZrWMBUf9OMDeTElct9aT41fnlBdCOqELaDwfUz5Ejb3F7tZDfR+1s7cFXq2/yx2qHe3u99xTcVzYcBxl8OlYqwIM8aklfeyWV9kTBLOpLKRTTE3iYKgC7sVEnbN1cmiEkkxkDzG2kJu4aYSPv19QrROc29SpRWb/D6I8AL7Blvd6pigE+G5dDkK4g/jxcTFGe69WtbYcaBa7jPZ5r79sjnp+wflEsLrEmD03c7Yn+ZASCDebmoc6bOFfqCvVjkDE0XVIad7opk3E7RvBbj/+XReKVZa9XiMGi/XI/Pe5OmWyC6GYccgPxV4dlDU4bGHRvpt91YrjNvSWjhQV5Ht/llm/ghbHQFE6fL8ruMGPvGQAOuttKRyd1ugDh4eSBb445UbzNqXDNJwLobPt+TVIYn/il53rmYraDr8aWxg+UtQkXAlXoNWMk4dvsoFwQHPdVOy6Od5tLpMg+w1fCaOaE7VuWwC1kWumOmIyzTaCWh81fXvdt5m8Crux/S+U+I53VH/07spmrT3hHIhEo1wENdNAJ9iMpgLhb7t46aVTjLDQuZDe4=
