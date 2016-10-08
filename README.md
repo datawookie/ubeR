@@ -1,6 +1,8 @@
 ![](https://cdn.rawgit.com/DataWookie/ubeR/master/uber-logo.svg)
 
 [![Build Status](https://travis-ci.org/DataWookie/ubeR.svg?branch=master)](https://travis-ci.org/DataWookie/ubeR)
+[![GitHub version](https://badge.fury.io/gh/DataWookie%2FubeR.svg)](https://badge.fury.io/gh/DataWookie%2FubeR)
+[![codecov.io](https://codecov.io/github/DataWookie/ubeR/coverage.svg?branch=master)](https://codecov.io/github/DataWookie/ubeR?branch=master)
 
 # Installation
 
