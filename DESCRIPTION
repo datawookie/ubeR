@@ -8,7 +8,12 @@ Authors@R: c(
   person("Jonathan","Carroll", email = "rpkg@jcarroll.com.au", role = c("ctb"))
   )
 Maintainer: Andrew Collier <andrew@exegetic.biz>
-Description: Functions for interacting with the Uber API.
+Description: The Uber API provides a programmatic way to interact with the Uber
+international online transportation network. The ubeR package enables access to
+the Uber API from within R. Specifically it is possible to: extract information
+about a user's account, find out about nearby Uber vehicles, get estimates for
+rides, book or cancel a ride. See <https://developer.uber.com/> for more
+information.
 License: GPL-3
 LazyData: TRUE
 URL: http://github.com/DataWookie/ubeR
