@@ -9,11 +9,11 @@ Authors@R: c(
   )
 Maintainer: Andrew Collier <andrew@exegetic.biz>
 Description: The Uber API provides a programmatic way to interact with the Uber
-  international online transportation network. This package enables access to
-  the Uber API from within R. Specifically it is possible to: extract information
-  about a user's account, find out about nearby Uber vehicles, get estimates for
-  rides, book or cancel a ride. See <https://developer.uber.com/> for more
-  information.
+    international online transportation network. This package enables access to
+    the Uber API from within R. Specifically it is possible to: extract information
+    about a user's account, find out about nearby Uber vehicles, get estimates for
+    rides, book or cancel a ride. See <https://developer.uber.com/> for more
+    information.
 License: GPL-3
 LazyData: TRUE
 URL: http://github.com/DataWookie/ubeR
