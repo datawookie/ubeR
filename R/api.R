@@ -8,7 +8,8 @@
 #' @param longitude  Longitude of location.
 #' @param product_id Unique identifier representing a specific product.
 #' @references
-#' \url{https://developer.uber.com/docs/rides/api/v1-products}.
+#' \url{https://developer.uber.com/docs/ride-requests/references/api/v1-products-get}
+#' \url{https://developer.uber.com/docs/ride-requests/references/api/v1-products-product_id-get}
 #' @examples
 #' \dontrun{
 #' uber_products(latitude = -33.925278, longitude = 18.423889)
@@ -42,7 +43,7 @@ uber_products <- function(latitude = NA, longitude = NA, product_id = NA) {
 #' @param end_address     Final address.
 #' @param seat_count      Number of passengers.
 #' @references
-#' \url{https://developer.uber.com/docs/rides/api/v1-estimates-price}
+#' \url{https://developer.uber.com/docs/ride-requests/references/api/v1-estimates-price-get}
 #' @examples
 #' \dontrun{
 #' uber_estimate_price(start_latitude = 37.761492, start_longitude = -122.423941,
@@ -65,7 +66,7 @@ uber_estimate_price <- function(start_latitude = NULL, start_longitude = NULL, e
 #' @param start_address   Initial address.
 #' @param product_id      Unique identifier representing a specific product.
 #' @references
-#' \url{https://developer.uber.com/docs/rides/api/v1-estimates-time}
+#' \url{https://developer.uber.com/docs/ride-requests/references/api/v1-estimates-time-get}
 #' @examples
 #' \dontrun{
 #' uber_estimate_time(start_latitude = 37.761492, start_longitude = -122.423941)
@@ -88,7 +89,7 @@ uber_estimate_time <- function(start_latitude = NULL, start_longitude = NULL, st
 #' @param limit  Number of items to retrieve.
 #' @param offset Offset the returned results.
 #' @references
-#' \url{https://developer.uber.com/docs/rides/api/v12-history}
+#' \url{https://developer.uber.com/docs/ride-requests/references/api/v12-history-get}
 #' @examples
 #' \dontrun{
 #' uber_history()
@@ -123,7 +124,7 @@ uber_history <- function(limit = 5, offset = 0) {
 #' Requires an OAuth 2.0 token with the profile scope.
 #'
 #' @references
-#' \url{https://developer.uber.com/docs/rides/api/v1-me}
+#' \url{https://developer.uber.com/docs/ride-requests/references/api/v1-me-get}
 #' @examples
 #' \dontrun{
 #' uber_me()
@@ -148,7 +149,7 @@ uber_me <- function() {
 #' @param start_address   Initial address.
 #' @param end_address     Final address.
 #' @references
-#' \url{https://developer.uber.com/docs/rides/api/v1-requests}
+#' \url{https://developer.uber.com/docs/ride-requests/references/api/v1-requests-post}
 #' @examples
 #' \dontrun{
 #' uber_requests(start_address = "37 Beach Road, Mouille Point, Cape Town",
@@ -170,7 +171,7 @@ uber_requests <- function(start_latitude = NULL, start_longitude = NULL, end_lat
 #' @param end_latitude    Final latitude.
 #' @param end_longitude   Final longitude.
 #' @references
-#' \url{https://developer.uber.com/docs/rides/api/v1-requests-estimate}
+#' \url{https://developer.uber.com/docs/ride-requests/references/api/v1-requests-estimate-post}
 #' @examples
 #' \dontrun{
 #' uber_requests_estimate(start_latitude = 37.761492, start_longitude = -122.423941,
@@ -194,7 +195,7 @@ uber_requests_estimate <- function(start_latitude = NULL, start_longitude = NULL
 #' Requires an OAuth 2.0 token with the all_trips or request scope.
 #'
 #' @references
-#' \url{https://developer.uber.com/docs/rides/api/v1-requests-current}
+#' \url{https://developer.uber.com/docs/ride-requests/references/api/v1-requests-current-get}
 #' @examples
 #' \dontrun{
 #' uber_requests_current()
@@ -211,7 +212,7 @@ uber_requests_current <- function() {
 #' Requires an OAuth 2.0 token with the request scope.
 #'
 #' @references
-#' \url{https://developer.uber.com/docs/rides/api/v1-requests-current-delete}
+#' \url{https://developer.uber.com/docs/ride-requests/references/api/v1-requests-current-delete}
 #' @examples
 #' \dontrun{
 #' uber_requests_current_delete()
@@ -233,7 +234,7 @@ uber_requests_current_delete <- function() {
 #'
 #' @param place_id Either "home" or "work".
 #' @references
-#' \url{https://developer.uber.com/docs/rides/api/v1-places-get}
+#' \url{https://developer.uber.com/docs/ride-requests/references/api/v1-places-place_id-get}
 #' @examples
 #' \dontrun{
 #' uber_places_get()
@@ -255,7 +256,7 @@ uber_places_get <- function(place_id = c("home", "work")) {
 #' @param place_id Either "home" or "work".
 #' @param address  Address to be assigned.
 #' @references
-#' \url{https://developer.uber.com/docs/rides/api/v1-places-put}
+#' \url{https://developer.uber.com/docs/ride-requests/references/api/v1-places-place_id-put}
 #' @examples
 #' \dontrun{
 #' uber_places_put("home", "115 St Andrews Dr, Durban North, 4051, South Africa")
@@ -275,7 +276,7 @@ uber_places_put <- function(place_id = c("home", "work"), address) {
 #' Requires an OAuth 2.0 token with the request scope.
 #'
 #' @references
-#' \url{https://developer.uber.com/docs/rides/api/v1-payment-methods}
+#' \url{https://developer.uber.com/docs/ride-requests/references/api/v1-payment-methods-get}
 #' @export
 uber_payment_methods <- function() {
   callAPI("payment-methods", 1)
