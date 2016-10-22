@@ -23,6 +23,6 @@ uber_places_put("home", "115 St Andrews Dr, Durban North, 4051, South Africa")
 }
 }
 \references{
-\url{https://developer.uber.com/docs/rides/api/v1-places-put}
+\url{https://developer.uber.com/docs/ride-requests/references/api/v1-places-place_id-put}
 }
 

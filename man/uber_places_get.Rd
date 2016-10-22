@@ -23,6 +23,6 @@ uber_places_get("work")
 }
 }
 \references{
-\url{https://developer.uber.com/docs/rides/api/v1-places-get}
+\url{https://developer.uber.com/docs/ride-requests/references/api/v1-places-place_id-get}
 }
 

@@ -33,6 +33,6 @@ uber_estimate_price(start_latitude = 37.761492, start_longitude = -122.423941,
 }
 }
 \references{
-\url{https://developer.uber.com/docs/rides/api/v1-estimates-price}
+\url{https://developer.uber.com/docs/ride-requests/references/api/v1-estimates-price-get}
 }
 

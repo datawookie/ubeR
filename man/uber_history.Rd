@@ -23,6 +23,6 @@ uber_history()
 }
 }
 \references{
-\url{https://developer.uber.com/docs/rides/api/v12-history}
+\url{https://developer.uber.com/docs/ride-requests/references/api/v12-history-get}
 }
 

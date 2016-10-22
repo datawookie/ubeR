@@ -23,6 +23,7 @@ uber_products(product_id = "91901472-f30d-4614-8ba7-9fcc937cebf5")
 }
 }
 \references{
-\url{https://developer.uber.com/docs/rides/api/v1-products}.
+\url{https://developer.uber.com/docs/ride-requests/references/api/v1-products-get}
+\url{https://developer.uber.com/docs/ride-requests/references/api/v1-products-product_id-get}
 }
 

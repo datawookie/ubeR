@@ -13,6 +13,6 @@ Retrieve a list of the user's available payment methods.
 Requires an OAuth 2.0 token with the request scope.
 }
 \references{
-\url{https://developer.uber.com/docs/rides/api/v1-payment-methods}
+\url{https://developer.uber.com/docs/ride-requests/references/api/v1-payment-methods-get}
 }
 
