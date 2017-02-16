@@ -1,7 +1,7 @@
 context("Utils")
 
 test_that("raise error on fail to geocode", {
-  expect_error(geocode("The Old Biscuit Mill"), "Unable to find location 'The Old Biscuit Mill'.")
+  expect_error(geocode("Kryptonopolis"), "Unable to find location 'Kryptonopolis'.")
 })
 
 test_that("check.latitude() fails for invalid latitudes", {
