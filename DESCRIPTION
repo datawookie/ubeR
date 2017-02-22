@@ -28,9 +28,7 @@ Imports:
     dplyr,
     googleway,
     ggplot2,
-    ggthemes,
-    DBI,
-    assertthat
+    ggthemes
 Suggests:
     testthat
 RoxygenNote: 5.0.1
