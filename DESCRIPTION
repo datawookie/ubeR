@@ -28,7 +28,8 @@ Imports:
     dplyr,
     googleway,
     ggplot2,
-    ggthemes
+    ggthemes,
+    DBI
 Suggests:
     testthat
 RoxygenNote: 5.0.1
