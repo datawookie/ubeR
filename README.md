@@ -67,7 +67,12 @@ Here's an example of taking the ubeR package through its paces. First load the p
 
     library(ubeR)
 
-Next get the ID and secret used for authenticating with Uber. Below these are retrieved from the environment.
+Next get the ID and secret used for authenticating with Uber. You can either set these directly.
+
+    UBER_CLIENTID = "9QbFZe07IFuEzFZqe_iE50mjUbjuV8H5"
+    UBER_CLIENTSECRET = "UoLT13eYE6LiESlC5M6nr37pY9nP3Gp5wK7LJyY0"
+
+Another good option is to retrieve them from the environment.
 
     UBER_CLIENTID = Sys.getenv("UBER_CLIENTID")
     UBER_CLIENTSECRET = Sys.getenv("UBER_CLIENTSECRET")
